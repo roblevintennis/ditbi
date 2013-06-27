@@ -1,0 +1,1409 @@
+/*
+
+Webstiles - A simple template for web design prototyping.
+
+By Namanyay Goel | http://namanyayg.com/ | @namanyayg
+
+Under MIT License.
+https://github.com/namanyayg/webstiles.
+
+*/
+/* Sympl http://github.com/namanyayg/sympl | MIT License | Namanyay Goel http://namanyayg.com/ */
+/* Sympl.css v3.0.0 sympl.namanyayg.com |
+Namanyay Goel | www.namanyayg.com | @namanyayg */
+/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* normalize.scss v2.1.0 | MIT/GPLv2 License | bit.ly/normalize-with-compass */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 63, ../sass/partials/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 73, ../sass/partials/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 86, ../sass/partials/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9.
+ * Known issue: no IE 6 support.
+ */
+/* line 96, ../sass/partials/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ */
+/* line 112, ../sass/partials/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  /* Establish a vertical rhythm unit using $base-line-height. */
+  line-height: 1.5em;
+}
+
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements in IE 6/7.
+ */
+/* line 130, ../sass/partials/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 139, ../sass/partials/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 151, ../sass/partials/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 160, ../sass/partials/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+/* line 173, ../sass/partials/_normalize.scss */
+p,
+pre {
+  margin: 1.5em 0;
+}
+
+/* line 177, ../sass/partials/_normalize.scss */
+blockquote {
+  /* Set 1 unit of vertical rhythm on the top and bottom margin. */
+  margin: 1.5em 40px;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 187, ../sass/partials/_normalize.scss */
+h1 {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 2em;
+  line-height: 1.5em;
+  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+/* line 196, ../sass/partials/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* line 202, ../sass/partials/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  line-height: 1.28205em;
+  margin-top: 1.28205em;
+  margin-bottom: 1.28205em;
+}
+
+/* line 208, ../sass/partials/_normalize.scss */
+h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* line 214, ../sass/partials/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  line-height: 1.80723em;
+  margin-top: 1.80723em;
+  margin-bottom: 1.80723em;
+}
+
+/* line 220, ../sass/partials/_normalize.scss */
+h6 {
+  font-size: 0.67em;
+  line-height: 2.23881em;
+  margin-top: 2.23881em;
+  margin-bottom: 2.23881em;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 230, ../sass/partials/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 239, ../sass/partials/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 247, ../sass/partials/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+/* line 256, ../sass/partials/_normalize.scss */
+hr {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 265, ../sass/partials/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 277, ../sass/partials/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: "courier new", monospace;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 289, ../sass/partials/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+/* line 297, ../sass/partials/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 305, ../sass/partials/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 314, ../sass/partials/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 321, ../sass/partials/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 325, ../sass/partials/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Set 1 unit of vertical rhythm and a consistent indentation.
+ */
+/* line 340, ../sass/partials/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1.5em 0;
+  padding: 0 0 0 40px;
+}
+
+/* line 345, ../sass/partials/_normalize.scss */
+dl {
+  padding: 0;
+}
+
+/* line 349, ../sass/partials/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+/* line 359, ../sass/partials/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 373, ../sass/partials/_normalize.scss */
+img {
+  border: 0;
+  /* Improve image quality when scaled in IE 7. */
+  -ms-interpolation-mode: bicubic;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 385, ../sass/partials/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 397, ../sass/partials/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+/* line 410, ../sass/partials/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 419, ../sass/partials/_normalize.scss */
+fieldset {
+  border-color: #c0c0c0;
+  margin: 0 2px;
+  /* Apply borders and padding that keep the vertical rhythm. */
+  border-top-style: solid;
+  border-top-width: 0.0625em;
+  padding-top: 0.4625em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.0625em;
+  padding-bottom: 0.9125em;
+  border-left-style: solid;
+  border-left-width: 0.0625em;
+  padding-left: 0.875em;
+  border-right-style: solid;
+  border-right-width: 0.0625em;
+  padding-right: 0.875em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+/* line 435, ../sass/partials/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 4. Improve appearance and consistency with IE 6/7.
+ */
+/* line 453, ../sass/partials/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  vertical-align: baseline;
+  /* 4 */
+  *vertical-align: middle;
+  /* 4 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 469, ../sass/partials/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 481, ../sass/partials/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 498, ../sass/partials/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 511, ../sass/partials/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 523, ../sass/partials/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 538, ../sass/partials/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 549, ../sass/partials/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 558, ../sass/partials/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 568, ../sass/partials/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 581, ../sass/partials/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * Downloaded from: https://github.com/lloydk/font-stack/blob/master/lib/stylesheets/_font-stack.scss
+ */
+/*
+ *
+ * Color Me SASS v1.0
+ * Built and Designed by Richard Bray
+ *
+ */
+/*** =COLOR ***/
+/* line 5, ../sass/partials/_colors.scss */
+[class^="color"] {
+  height: 3.5em;
+  border: 5px solid whitesmoke;
+  -webkit-box-shadow: #dbd7d2 0px 0px 4px;
+  -moz-box-shadow: #dbd7d2 0px 0px 4px;
+  box-shadow: #dbd7d2 0px 0px 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 12, ../sass/partials/_colors.scss */
+.color-1 {
+  background: #73c2fb;
+}
+
+/* line 13, ../sass/partials/_colors.scss */
+.color-2 {
+  background: #ff944d;
+}
+
+/* line 14, ../sass/partials/_colors.scss */
+.color-3 {
+  background: crimson;
+}
+
+/* line 15, ../sass/partials/_colors.scss */
+.color-4 {
+  background: #82b548;
+}
+
+/* line 16, ../sass/partials/_colors.scss */
+.color-5 {
+  background: silver;
+}
+
+/* line 17, ../sass/partials/_colors.scss */
+.color-6 {
+  background: #7b3f00;
+}
+
+/* line 20, ../sass/partials/_colors.scss */
+.adj-1 {
+  color: #73c2fb;
+}
+
+/* line 21, ../sass/partials/_colors.scss */
+.adj-2 {
+  color: #ff944d;
+}
+
+/* line 22, ../sass/partials/_colors.scss */
+.adj-3 {
+  color: crimson;
+}
+
+/* line 23, ../sass/partials/_colors.scss */
+.adj-4 {
+  color: #82b548;
+}
+
+/* line 24, ../sass/partials/_colors.scss */
+.adj-5 {
+  color: silver;
+}
+
+/* line 25, ../sass/partials/_colors.scss */
+.adj-6 {
+  color: #7b3f00;
+}
+
+/* line 39, ../sass/partials/_colors.scss */
+fieldset {
+  border-color: silver;
+}
+
+/* line 40, ../sass/partials/_colors.scss */
+mark {
+  background: #ff944d;
+  color: black;
+}
+
+/*
+=Core
+*/
+/* line 4, ../sass/partials/_core.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remember to use normalize or a reset! */
+/* line 10, ../sass/partials/_core.scss */
+body, input, textarea, button, form, select {
+  font: 100%/1.5 Tahoma, Geneva, Verdana, sans-serif;
+  color: #414141;
+  /* Inputs, forms, etc, can have weird font styles */
+}
+
+/* line 16, ../sass/partials/_core.scss */
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #73c2fb;
+  border-bottom: thin solid transparent;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+/* line 25, ../sass/partials/_core.scss */
+a:hover, a:active, a:focus {
+  border-bottom-color: #d2d2d2;
+}
+
+/*
+=Grid
+*/
+/* line 6, ../sass/partials/_grids.scss */
+.stack {
+  /* A set of grid items must be in a stack.
+  Use sympl-stack when you want a margin at the bottom */
+  clear: both;
+  margin: 0 0 0 -1.5em;
+}
+
+/* line 13, ../sass/partials/_grids.scss */
+.stack-sympl {
+  padding-bottom: 1.5em;
+}
+
+/* line 17, ../sass/partials/_grids.scss */
+.stack-clean {
+  padding-bottom: 0;
+  padding-top: 1.5em;
+}
+
+/* line 18, ../sass/partials/_grids.scss */
+.stack-clean .sympl {
+  padding-bottom: 1.5em;
+}
+
+/* line 20, ../sass/partials/_grids.scss */
+.sympl {
+  /* Each grid item should have the sympl class, along with at least one class for size */
+  float: left;
+  padding: 0 0 0 1.5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 31, ../sass/partials/_grids.scss */
+.stack:before,
+.stack:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 36, ../sass/partials/_grids.scss */
+.stack:after {
+  clear: both;
+}
+
+/* line 40, ../sass/partials/_grids.scss */
+.full, .twohalfs, .threethirds {
+  width: 100%;
+}
+
+/* line 41, ../sass/partials/_grids.scss */
+.half, .twoquarters, .threesixths {
+  width: 50%;
+}
+
+/* line 43, ../sass/partials/_grids.scss */
+.onethird, .twosixths {
+  width: 33.333333%;
+}
+
+/* line 44, ../sass/partials/_grids.scss */
+.twothirds, .foursixths {
+  width: 66.666666%;
+}
+
+/* line 46, ../sass/partials/_grids.scss */
+.quarter {
+  width: 25%;
+}
+
+/* line 47, ../sass/partials/_grids.scss */
+.three-quarters {
+  width: 75%;
+}
+
+/* line 49, ../sass/partials/_grids.scss */
+.onefifth {
+  width: 20%;
+}
+
+/* line 50, ../sass/partials/_grids.scss */
+.twofifths {
+  width: 40%;
+}
+
+/* line 51, ../sass/partials/_grids.scss */
+.threefifths {
+  width: 60%;
+}
+
+/* line 52, ../sass/partials/_grids.scss */
+.fourfifths {
+  width: 80%;
+}
+
+/* line 54, ../sass/partials/_grids.scss */
+.onesixth {
+  width: 16.666666%;
+}
+
+/* line 55, ../sass/partials/_grids.scss */
+.fivesixths {
+  width: 83.333333%;
+}
+
+/*
+=Media Queries
+*/
+/* L stands for large. L styles get triggered at 60em, that is, 960px */
+@media (max-width: 60em) {
+  /* line 8, ../sass/partials/_mq.scss */
+  .l-full {
+    width: 100%;
+  }
+
+  /* line 10, ../sass/partials/_mq.scss */
+  .l-half, .l-twoquarters, .l-threesixths {
+    width: 50%;
+  }
+
+  /* line 12, ../sass/partials/_mq.scss */
+  .l-onethird, .l-twosixths {
+    width: 33.333333%;
+  }
+
+  /* line 13, ../sass/partials/_mq.scss */
+  .l-twothirds, .l-foursixths {
+    width: 66.666666%;
+  }
+
+  /* line 15, ../sass/partials/_mq.scss */
+  .l-quarter {
+    width: 25%;
+  }
+
+  /* line 16, ../sass/partials/_mq.scss */
+  .l-three-quarters {
+    width: 75%;
+  }
+
+  /* line 18, ../sass/partials/_mq.scss */
+  .l-onefifth {
+    width: 20%;
+  }
+
+  /* line 19, ../sass/partials/_mq.scss */
+  .l-twofifths {
+    width: 40%;
+  }
+
+  /* line 20, ../sass/partials/_mq.scss */
+  .l-threefifths {
+    width: 60%;
+  }
+
+  /* line 21, ../sass/partials/_mq.scss */
+  .l-fourfifths {
+    width: 80%;
+  }
+
+  /* line 23, ../sass/partials/_mq.scss */
+  .l-onesixth {
+    width: 16.666666%;
+  }
+
+  /* line 24, ../sass/partials/_mq.scss */
+  .l-fivesixths {
+    width: 83.333333%;
+  }
+
+  /* line 26, ../sass/partials/_mq.scss */
+  .hide-l-and-below {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 27, ../sass/partials/_mq.scss */
+  .show-l-and-below {
+    display: block;
+    visibility: visible;
+  }
+}
+@media (max-width: 60em) and (min-width: 45em) {
+  /* line 31, ../sass/partials/_mq.scss */
+  .hide-on-l {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 32, ../sass/partials/_mq.scss */
+  .show-on-l {
+    display: block;
+    visibility: visible;
+  }
+}
+/* M stands for medium. M styles get triggered at 45em, that is, 720px */
+@media (max-width: 45em) {
+  /* line 38, ../sass/partials/_mq.scss */
+  .m-full {
+    width: 100%;
+  }
+
+  /* line 40, ../sass/partials/_mq.scss */
+  .m-half, .m-twoquarters {
+    width: 50%;
+  }
+
+  /* line 42, ../sass/partials/_mq.scss */
+  .m-onethird {
+    width: 33.333333%;
+  }
+
+  /* line 43, ../sass/partials/_mq.scss */
+  .m-twothirds {
+    width: 66.666666%;
+  }
+
+  /* line 45, ../sass/partials/_mq.scss */
+  .m-quarter {
+    width: 25%;
+  }
+
+  /* line 46, ../sass/partials/_mq.scss */
+  .m-three-quarters {
+    width: 75%;
+  }
+
+  /* line 48, ../sass/partials/_mq.scss */
+  .hide-m-and-below {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 49, ../sass/partials/_mq.scss */
+  .show-m-and-below {
+    display: block;
+    visibility: visible;
+  }
+}
+@media (max-width: 45em) and (min-width: 30em) {
+  /* line 53, ../sass/partials/_mq.scss */
+  .hide-on-m {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 54, ../sass/partials/_mq.scss */
+  .show-on-m {
+    display: block;
+    visibility: visible;
+  }
+}
+/* S stands for small. S styles get triggered at 30em, ie, 480px */
+@media (max-width: 30em) {
+  /* line 60, ../sass/partials/_mq.scss */
+  .sympl {
+    width: 100%;
+  }
+
+  /* line 62, ../sass/partials/_mq.scss */
+  .s-full {
+    width: 100%;
+  }
+
+  /* line 64, ../sass/partials/_mq.scss */
+  .s-half, .s-twoquarters {
+    width: 50%;
+  }
+
+  /* line 66, ../sass/partials/_mq.scss */
+  .s-onethird {
+    width: 33.333333%;
+  }
+
+  /* line 67, ../sass/partials/_mq.scss */
+  .s-twothirds {
+    width: 66.666666%;
+  }
+
+  /* line 69, ../sass/partials/_mq.scss */
+  .hide-on-s {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 70, ../sass/partials/_mq.scss */
+  .show-on-s {
+    display: block;
+    visibility: visible;
+  }
+}
+/*====================
+=CUSTOM
+====================*/
+/* line 6, ../sass/partials/_custom.scss */
+.wrap {
+  width: 80em;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/* line 12, ../sass/partials/_custom.scss */
+.ws-item {
+  margin-bottom: 2em;
+}
+/* line 14, ../sass/partials/_custom.scss */
+.ws-item > h1 {
+  font-size: 1.5em;
+  color: #9f9f9f;
+  margin: 1em 0 1em 0;
+}
+/* line 19, ../sass/partials/_custom.scss */
+.ws-item h1:first-of-type {
+  margin: 0em 0 0.5em 0;
+}
+
+/*** =ADJECTIVES ***/
+/* line 25, ../sass/partials/_custom.scss */
+.ws-adjectives div {
+  font-size: 1.5em;
+  padding-bottom: .25em;
+}
+
+/* line 31, ../sass/partials/_custom.scss */
+.ws-item.ws-adjectives {
+  margin-bottom: .5em;
+}
+
+/* line 34, ../sass/partials/_custom.scss */
+.ws-settings {
+  display: none;
+  background: #dbd7d2;
+  padding: 10px;
+}
+/* line 39, ../sass/partials/_custom.scss */
+.ws-settings .stack {
+  margin-bottom: .25em;
+}
+/* line 42, ../sass/partials/_custom.scss */
+.ws-settings .ws-item {
+  margin-bottom: 0px;
+}
+
+/* line 47, ../sass/partials/_custom.scss */
+.ws-code {
+  padding: 10px;
+}
+/* line 50, ../sass/partials/_custom.scss */
+.ws-code > h1 {
+  font-size: .875em;
+  color: #9f9f9f;
+  margin: 1em 0 1em 0;
+}
+
+/*** =COLOPHON ***/
+/* line 57, ../sass/partials/_custom.scss */
+.colophon {
+  clear: both;
+  text-align: center;
+  font-size: .875em;
+  padding: 1.714em 0;
+  border-top: thin solid #eeeeee;
+  margin-top: 1.714em;
+}
+
+/* line 66, ../sass/partials/_custom.scss */
+.export {
+  margin-top: 1em;
+}
+
+/* line 69, ../sass/partials/_custom.scss */
+.slider-wrap {
+  margin: 0;
+  padding: 0;
+  border-top: solid 3px #5e4c3a;
+}
+
+/* line 73, ../sass/partials/_custom.scss */
+.slider {
+  color: #f2ede9;
+  width: 10em;
+  text-align: center;
+  padding: 0.3em 1em;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  background: #ff0084;
+  border: 2px solid whitesmoke;
+  border-top: none;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* line 86, ../sass/partials/_custom.scss */
+.slider:hover {
+  color: white;
+  border: 2px solid #fdfdfd;
+  text-shadow: 0px 0px 1px #aaaaaa;
+  border-top: none;
+}
+
+/* line 92, ../sass/partials/_custom.scss */
+.slider:after, .slider:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 102, ../sass/partials/_custom.scss */
+.slider:after {
+  border-top-color: #ff0084;
+  border-width: 7px;
+  left: 50%;
+  margin-left: -7px;
+}
+
+/* line 109, ../sass/partials/_custom.scss */
+.slider:before {
+  border-top-color: whitesmoke;
+  border-width: 10px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+/*** =MASTHEAD ***/
+/* line 5, ../sass/partials/_masthead.scss */
+.masthead {
+  background: #f6f6f6;
+  overflow: hidden;
+  margin-bottom: .5em;
+}
+
+/* line 7, ../sass/partials/_masthead.scss */
+.logo h1 {
+  margin: 0;
+  float: left;
+  padding: 0.5em 0;
+  line-height: 1;
+}
+
+/* line 14, ../sass/partials/_masthead.scss */
+.menu {
+  float: right;
+}
+
+/* line 15, ../sass/partials/_masthead.scss */
+.menu ul {
+  padding: 1em 0;
+  margin: 0;
+}
+
+/* line 17, ../sass/partials/_masthead.scss */
+.menu li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 0 0.5em 0.5em;
+}
+
+/* line 23, ../sass/partials/_masthead.scss */
+.menu a {
+  padding: .5em;
+  border: 0.25em solid #73c2fb;
+  display: block;
+}
+
+/* line 29, ../sass/partials/_masthead.scss */
+.menu a:hover {
+  background: #73c2fb;
+  color: whitesmoke;
+}
+
+/*** =FORM ***/
+/* line 4, ../sass/partials/_forms.scss */
+.ws-form {
+  margin-top: -1.5em;
+}
+
+/* line 6, ../sass/partials/_forms.scss */
+input, textarea {
+  /* Use for styling text based form elements, like name, email, password.
+  Button/submit specific styles below, those will override */
+  display: block;
+  padding: .5em;
+  margin-bottom: .75em;
+  border: 0.25em solid #eeeeee;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  resize: none;
+}
+
+/* line 21, ../sass/partials/_forms.scss */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #73c2fb;
+}
+
+/* line 26, ../sass/partials/_forms.scss */
+input[type='button'], input[type='submit'], button, .button {
+  border: none;
+  background: transparent;
+  line-height: 1;
+  cursor: pointer;
+  padding: 1em 1.5em;
+  border: 0.25em solid rgba(0, 0, 0, 0.1);
+  color: whitesmoke;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  display: block;
+  margin-bottom: .75rem;
+}
+/* line 39, ../sass/partials/_forms.scss */
+input[type='button'].rounded, input[type='submit'].rounded, button.rounded, .button.rounded {
+  border: none;
+  padding: 1.1em 1.5em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 46, ../sass/partials/_forms.scss */
+input[type='button']:hover, input[type='submit']:hover, button:hover, .button:hover {
+  box-shadow: inset 0 0 10em rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* line 52, ../sass/partials/_forms.scss */
+input[type='button']:focus, input[type='submit']:focus, button:focus, .button:focus,
+input[type='button']:active, input[type='submit']:active, button:active, .button:active {
+  box-shadow: inset 0 0 10em rgba(0, 0, 0, 0.2);
+}
+
+/* line 56, ../sass/partials/_forms.scss */
+.btn-primary {
+  font-size: 1.125em;
+  background: #73c2fb;
+}
+
+/* line 61, ../sass/partials/_forms.scss */
+.btn-secondary {
+  background: #ff944d;
+}
+
+/* line 65, ../sass/partials/_forms.scss */
+.btn-tertiary {
+  font-size: .875em;
+  background: #9f9f9f;
+}
+
+/*
+=Typography
+*/
+/* line 6, ../sass/partials/_typography.scss */
+p {
+  margin: 0;
+}
+
+/* line 7, ../sass/partials/_typography.scss */
+p + p {
+  margin-top: 1.5em;
+}
+
+/* Headings */
+/* line 10, ../sass/partials/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  /* Set defaults for all headings here,
+  you might want to change fonts or sizes */
+  color: #222222;
+  font-weight: 400;
+  font-family: Georgia;
+}
+
+/* line 18, ../sass/partials/_typography.scss */
+h1 {
+  font-size: 2em;
+  line-height: 1.5;
+  margin: 0.375em 0;
+}
+
+/* line 24, ../sass/partials/_typography.scss */
+h2 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin: 0.5em 0;
+}
+
+/* line 30, ../sass/partials/_typography.scss */
+h3 {
+  font-size: 1.25em;
+  line-height: 1.2;
+  margin: 0.6em 0;
+}
+
+/* line 36, ../sass/partials/_typography.scss */
+h4 {
+  font-size: 1.125em;
+  line-height: 1.333333;
+  margin: 0.66667em 0;
+}
+
+/* line 42, ../sass/partials/_typography.scss */
+h5, h6 {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0.75em 0;
+  text-transform: uppercase;
+}
+
+/* line 52, ../sass/partials/_typography.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  _font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* line 60, ../sass/partials/_typography.scss */
+.adj-1 {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+/* line 61, ../sass/partials/_typography.scss */
+.adj-2 {
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+/* line 62, ../sass/partials/_typography.scss */
+.adj-3 {
+  font-family: "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive;
+}
+
+/* line 63, ../sass/partials/_typography.scss */
+.adj-4 {
+  font-family: "Franklin Gothic Medium", Arial, sans-serif;
+}
+
+/* line 64, ../sass/partials/_typography.scss */
+.adj-5 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+/* line 65, ../sass/partials/_typography.scss */
+.adj-6 {
+  font-family: Baskerville, "Baskerville old face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+/* line 68, ../sass/partials/_typography.scss */
+*[class*='select2'] {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}

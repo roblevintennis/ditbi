@@ -1,0 +1,42 @@
+
+
+/*** =COLOR ***/
+
+[class^="color"] {
+  height: 3.5em;
+  border: 5px solid $whiteSmoke;
+  @include box-shadow($grayTimberwolf 0px 0px 4px);
+  @include border-radius(3px);
+}
+
+.color-1 { background: $blueSky; }
+.color-2 { background: $orangeLight; }
+.color-3 { background: $redCrimson; }
+.color-4 { background: $greenGroupon; }
+.color-5 { background: $graySilver; }
+.color-6 { background: $brownChocolate; }
+
+
+.adj-1 { color: $blueSky; }
+.adj-2 { color: $orangeLight; }
+.adj-3 { color: $redCrimson; }
+.adj-4 { color: $greenGroupon; }
+.adj-5 { color: $graySilver; }
+.adj-6 { color: $brownChocolate; }
+
+// Custom colors
+// BLacks .. using lighten / darken so we only need one base black defined
+$black: #222;
+$medium-black: lighten($black, 12%);   // #414141
+$hard-black: darken($black, 14%);      // #000
+// Whites/Grays
+$soft-white: #eee;
+$gray-light: darken($soft-white, 11%); // #d2d2d2
+$gray-dark: darken($gray-light, 20%);  // #9f9f9f
+
+// normalize overrides (essentially the same but put here
+// so we can more easily keep track of these later)
+fieldset {border-color: $graySilver;}
+mark {background: $orangeLight; color: $hard-black;}
+
+

@@ -1,0 +1,114 @@
+
+/*====================
+=CUSTOM
+====================*/
+
+.wrap {
+  width: 80em;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.ws-item {
+  margin-bottom: 2em;
+  & > h1 {
+    font-size: 1.5em;
+    color: $gray-dark;
+    margin: 1em 0 1em 0;
+  }
+  & h1:first-of-type {
+    margin: 0em 0 .5em 0;
+  }
+}
+
+/*** =ADJECTIVES ***/
+.ws-adjectives div {
+  font-size: 1.5em;
+  padding-bottom: .25em;
+}
+
+// Override
+.ws-item.ws-adjectives {
+  margin-bottom: .5em;
+}
+.ws-settings {
+  display: none;
+  //border: .25em solid $soft-white;
+  background: $grayTimberwolf;
+  padding: 10px;
+  .stack {
+    margin-bottom: .25em;
+  }
+  .ws-item {
+    // Makes settings padding less so we can see more of the page being styled
+    margin-bottom: 0px;
+  }
+}
+.ws-code {
+  //border: .25em solid $soft-white;
+  padding: 10px;
+  & > h1 {
+    font-size: .875em;
+    color: #9f9f9f;
+    margin: 1em 0 1em 0;
+  }
+}
+/*** =COLOPHON ***/
+.colophon {
+  clear: both;
+  text-align: center;
+  font-size: .875em;
+  padding: 1.714em 0;
+  border-top: thin solid $soft-white;
+  margin-top: 1.714em;
+}
+
+.export {
+  margin-top: 1em;
+}
+.slider-wrap {
+  margin: 0; padding: 0;
+  border-top: solid 3px $brownDuller;
+}
+.slider {
+  color: darken($whiteIsabelline, 1%);
+  width: 10em;
+  text-align: center;
+  padding: .3em 1em;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  background: $pinkFlickr;
+  border: 2px solid $whiteSmoke;
+  border-top: none;
+  @include border-bottom-radius(8px);
+}
+.slider:hover {
+  color: $white;
+  border: 2px solid lighten($whiteSmoke, 3%);
+  @include single-text-shadow;
+  border-top: none;
+}
+.slider:after, .slider:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.slider:after {
+  //border-top-color: $orangeHackerNews;
+  border-top-color: $pinkFlickr;
+  border-width: 7px;
+  left: 50%;
+  margin-left: -7px;
+}
+.slider:before {
+  border-top-color: $whiteSmoke;
+  border-width: 10px;
+  left: 50%;
+  margin-left: -10px;
+}
