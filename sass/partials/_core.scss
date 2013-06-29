@@ -1,18 +1,16 @@
-/*
-=Core
-*/
+// Core
 body {
   margin: 0; padding: 0;
 }
-
-/* Remember to use normalize or a reset! */
-
 body, input, textarea, button, form, select {
   font: 100%/1.5 $tahoma-font-stack;
   color: $medium-black;
-  /* Inputs, forms, etc, can have weird font styles */
 }
-
+// For some reason Zurb Foundation is requiring this for the textarea to expand properly
+textarea {
+  height: inherit;
+  //resize:vertical;
+}
 a, a:link, a:visited {
   text-decoration: none;
   color: $blueSky;
@@ -21,7 +19,9 @@ a, a:link, a:visited {
   @include transition-duration(.3s);
   @include transition-timing-function(ease-in);
 }
-
+a.button {
+  color: white;
+}
 a:hover, a:active, a:focus {
   border-bottom-color: $gray-light;
 }

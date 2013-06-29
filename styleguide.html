@@ -1,0 +1,866 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]>               <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Styleguide</title>
+  <!-- <link rel="stylesheet" href="stylesheets/app.css" /> -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="components/modernizr/modernizr.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="large-12 columns">
+            <h2>Styleguide</h2>
+            <p>This styleguide includes components, typographical conventions, etc. The mark-up uses Zurb Foundation 4 conventions by default, but feel free to change it if you have your own (or another) CSS framework and/or conventions.</p>
+            <p>See Zurb's own <a href="http://foundation.zurb.com/docs/components/kitchen-sink.html" target="_blank">Kitchen Sink</a> page, for the most up-to-date and complete set of all of their Foundation components.</p>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 columns">
+            <h1>Typography</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 columns">
+            <h2>Headers</h2>
+            <h1>h1. This is a very large header.</h1>
+            <h2>h2. This is a large header.</h2>
+            <h3>h3. This is a medium header.</h3>
+            <h4>h4. This is a moderate header.</h4>
+            <h5>h5. This is a small header.</h5>
+            <h6>h6. This is a tiny header.</h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 columns">
+            <h2>Subheaders</h2>
+            <h1 class="subheader">h1.subheader</h1>
+            <h2 class="subheader">h2.subheader</h2>
+            <h3 class="subheader">h3.subheader</h3>
+            <h4 class="subheader">h4.subheader</h4>
+            <h5 class="subheader">h5.subheader</h5>
+            <h6 class="subheader">h6.subheader</h6>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-12 columns">
+            <h2>Small segment headers</h2>
+            <h1>h1. <small>Small segment header.</small></h1>
+            <h2>h2. <small>Small segment header.</small></h2>
+            <h3>h3. <small>Small segment header.</small></h3>
+            <h4>h4. <small>Small segment header.</small></h4>
+            <h5>h5. <small>Small segment header.</small></h5>
+            <h6>h6. <small>Small segment header.</small></h6>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-12 large-12 columns">
+            <h2>Paragraphs</h2>
+            <p>Every front-end developer has that perfect combination of tools and libraries that he or she already uses to improve their workflow. Sometimes its that special combination of plugins to trick out their favorite editor or IDE (e.g. the perfect Vim, Sublime Text, or WebStorm set up). As we continue to learn of new tools, libraries, and best practices, we further pepper our set ups. But it turns out to be really hard to keep up with what <strong>"the cool kids"</strong> are using at any given point in time. This is why an <i>opinionated tool</i> such as <a href="http://yeoman.io/">Yeoman</a> can help us out so much. We’re provided an assortment of <em>battle-tested developer tools</em> that help us maintain best practices and speed up workflow.</p>
+            <h2>Links</h2>
+            <p>Here is a standard <a href="#">link</a>.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 large-12 columns">
+            <h1>Lists</h1>
+        </div>
+        <div class="small-12 large-12 columns">
+            <ul class="disc">
+                <li>List item with a much longer description or more content.</li>
+                <li>List item</li>
+                <li>List item
+                    <ul>
+                        <li>Nested List Item</li>
+                        <li>Nested List Item</li>
+                        <li>Nested List Item</li>
+                    </ul>
+                </li>
+                <li>List item</li>
+                <li>List item</li>
+                <li>List item</li>
+            </ul>
+            <ul class="circle">
+                <li>List item with circle</li>
+            </ul>
+            <ul class="square">
+                <li>List item with square</li>
+            </ul>
+            <ul class="no-bullet">
+                <li>List item with a much longer description or more content.</li>
+                <li>List item</li>
+                <li>List item
+                    <ul>
+                        <li>Nested List Item</li>
+                        <li>Nested List Item</li>
+                        <li>Nested List Item</li>
+                    </ul>
+                </li>
+                <li>List item</li>
+            </ul>
+            <ol>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+            </ol>
+            <dl>
+                <dt>Definition List</dt>
+                <dd>Definition Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="row">
+        <h1>Blockquotes</h1>
+        <div class="small-12 large-12 columns">
+            <blockquote>Insanity: doing the same thing over and over again and expecting different results.<cite>Albert Einstein</cite></blockquote>
+        </div>
+    </div>
+    <div class="row">
+        <h1>V-Card</h1>
+        <div class="small-12 large-12 columns">
+            <ul class="vcard">
+                <li class="fn">Gaius Baltar</li>
+                <li class="street-address">123 Colonial Ave.</li>
+                <li class="locality">Caprica City</li>
+                <li><span class="state">Caprica</span>, <span class="zip">12345</span></li>
+                <li class="email"><a href="#">g.baltar@cmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 large-12 columns">
+            <h1>Alert Boxes</h1>
+            <div data-alert="" class="alert-box">
+                This is a standard alert (div.alert-box).
+                <a href="" class="close">×</a>
+            </div>
+            <div data-alert="" class="alert-box radius">
+              This is a radius alert (div.alert-box.radius).
+              <a href="" class="close">×</a>
+            </div>
+            <div data-alert="" class="alert-box success">
+              This is a success alert (div.alert-box.success).
+              <a href="" class="close">×</a>
+            </div>
+            <div data-alert="" class="alert-box alert round">
+              This is an alert (div.alert-box.alert.round).
+              <a href="" class="close">×</a>
+            </div>
+            <div data-alert="" class="alert-box secondary">
+              This is a secondary alert (div.alert-box.secondary).
+              <a href="" class="close">×</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 large-12 columns">
+            <h1>Panels</h1>
+        </div>
+        <div class="small-6 large-6 columns">
+            <div class="panel">
+                <h5>This is a normal panel.</h5>
+                <p>It has an easy to override visual style, and is appropriately subdued.</p>
+            </div>
+        </div>
+        <div class="small-6 large-6 columns">
+            <div class="panel callout radius">
+                <h5>This is a callout panel.</h5>
+                <p>It's a little ostentatious, but useful for important content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 large-12 columns">
+            <h1>Pricing Tables</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-centered large-centered small-4 large-4 columns">
+            <ul class="pricing-table">
+              <li class="title">Standard</li>
+              <li class="price">$99.99</li>
+              <li class="description">An awesome description</li>
+              <li class="bullet-item">1 Database</li>
+              <li class="bullet-item">5GB Storage</li>
+              <li class="bullet-item">20 Users</li>
+              <li class="cta-button"><a class="button" href="#">Buy Now</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 large-12 columns">
+            <h1>Progress Indicators</h1>
+            <div class="progress large-6 success round"><span class="meter" style="width: 40%"></span></div>
+            <div class="progress large-6"><span class="meter" style="width: 40%"></span></div>
+            <div class="radius progress success large-8"><span class="meter" style="width: 80%"></span></div>
+            <div class="nice round progress alert large-10"><span class="meter" style="width: 30%"></span></div>
+            <div class="nice secondary progress"><span class="meter" style="width: 50%"></span></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 large-12 columns">
+            <h1>Tables</h1>
+            <p>Zurb Foundation tables default to being pre-styled with zebra-striping, borders, etc. If you don't want these you'll need to override the settings that get used by the scss/foundation/components/_tables.scss partial by defining the appropriate variables in your settings override (that gets included before foundation):</p>
+            <pre>
+$table-bg: #fff !default;
+$table-even-row-bg: #f9f9f9 !default;// e.g. make the same as $table-bg to remove striping
+$table-border-style: solid !default; // e.g. change to 'none'
+            </pre>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="200">Table Header</th>
+                        <th>Table Header</th>
+                        <th width="150">Table Header</th>
+                        <th width="150">Table Header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Content Goes Here</td>
+                        <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                        <td>Content Goes Here</td>
+                        <td>Content Goes Here</td>
+                    </tr>
+                    <tr>
+                        <td>Content Goes Here</td>
+                        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                        <td>Content Goes Here</td>
+                        <td>Content Goes Here</td>
+                    </tr>
+                    <tr>
+                        <td>Content Goes Here</td>
+                        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                        <td>Content Goes Here</td>
+                        <td>Content Goes Here</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 large-12 columns">
+            <h1>Grids</h1>
+        </div>
+    </div>
+    <div class="row display">
+        <div class="large-12 columns">large-12</div>
+    </div>
+    <div class="row display">
+        <div class="large-6 columns">large-6</div>
+        <div class="large-6 columns">large-6</div>
+    </div>
+    <div class="row display">
+        <div class="large-3 columns">large-3</div>
+        <div class="large-3 columns">large-3</div>
+        <div class="large-3 columns">large-3</div>
+        <div class="large-3 columns">large-3</div>
+    </div>
+    <div class="row display">
+        <div class="large-1 columns">large-1</div>
+        <div class="large-11 columns">large-11</div>
+    </div>
+    <div class="row display">
+        <div class="large-2 columns">large-2</div>
+        <div class="large-10 columns">large-10</div>
+    </div>
+    <div class="row display">
+        <div class="large-3 columns">large-3</div>
+        <div class="large-9 columns">large-9</div>
+    </div>
+    <div class="row display">
+        <div class="large-4 columns">large-4</div>
+        <div class="large-8 columns">large-8</div>
+    </div>
+    <div class="row display">
+        <div class="large-5 columns">large-5</div>
+        <div class="large-7 columns">large-7</div>
+    </div>
+    <!--  Two grids .. small large for responsiveness -->
+    <div class="row display">
+        <div class="small-2 large-4 columns">small-2 large-4 columns</div>
+        <div class="small-4 large-4 columns">small-4 large-4 columns</div>
+        <div class="small-6 large-4 columns">small-6 large-4 columns</div>
+    </div>
+    <div class="row display">
+        <div class="small-6 large-2 columns">small-6 large-2 columns</div>
+        <div class="small-6 large-8 columns">small-6 large-8 columns</div>
+        <div class="small-12 large-2 columns">small-12 large-2 columns</div>
+    </div>
+    <!-- Offset Example -->
+    <div class="row display">
+        <div class="large-2 columns">large-2</div>
+        <div class="large-8 large-offset-2 columns">large-8, large-ofset-2</div>
+    </div>
+    <div class="row display">
+        <div class="small-3 small-centered columns">3 centered</div>
+    </div>
+    <div class="row display">
+        <div class="small-6 large-centered columns">6 centered</div>
+    </div>
+    <div class="row display">
+        <div class="small-9 small-centered large-uncentered columns">small-9 centered</div>
+    </div>
+    <div class="row display">
+        <div class="small-11 small-centered columns">small-11 centered</div>
+    </div>
+    <!-- Source Ordering -->
+    <div class="row display">
+        <div class="small-2 push-10 columns">2</div>
+        <div class="small-10 pull-2 columns">10, last</div>
+    </div>
+    <div class="row display">
+        <div class="small-3 push-9 columns">3</div>
+        <div class="small-9 pull-3 columns">9, last</div>
+    </div>
+    <div class="row display">
+        <div class="small-4 push-8 columns">4</div>
+        <div class="small-8 pull-4 columns">8, last</div>
+    </div>
+    <div class="row display">
+        <div class="small-5 push-7 columns">5</div>
+        <div class="small-7 pull-5 columns">5, last</div>
+    </div>
+    <div class="row display">
+        <div class="small-6 push-6 columns">6</div>
+        <div class="small-6 pull-6 columns">6, last</div>
+    </div>
+
+    <div class="row">
+        <div class="small-12 large-12">
+            <h1>Pagination</h1>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="pagination">
+            <li class="arrow unavailable"><a href="">&laquo;</a></li>
+            <li class="current"><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li class="unavailable"><a href="">&hellip;</a></li>
+            <li><a href="">12</a></li>
+            <li><a href="">13</a></li>
+            <li class="arrow"><a href="">&raquo;</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="small-12 large-12">
+            <h1>Navigation</h1>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="side-nav large-3">
+            <li class="action"><a href="">First link</a></li>
+            <li class="a" href="">Second link</li>
+            <li class="divider"></li>
+            <li><a href="">Third link</a></li>
+            <li><a href="">Fourth link</a></li>
+            <li><a href="">Fifth link</a></li>
+        </ul>
+        <dl class="sub-nav">
+            <dt>Sub-Nav Filtering:</dt>
+            <dd class="active"><a href="#">All</a></dd>
+            <dd><a href="#">Active</a></dd>
+            <dd><a href="#">Pending</a></dd>
+            <dd><a href="#">Suspended</a></dd>
+        </dl>
+        <!-- Top Bar: copied http://foundation.zurb.com/docs/components/top-bar.html -->
+        <nav class="top-bar">
+          <ul class="title-area">
+            <!-- Title Area -->
+            <li class="name">
+              <h1><a href="#">Top Bar Title </a></h1>
+            </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+          </ul>
+
+          <section class="top-bar-section">
+            <!-- Left Nav Section -->
+            <ul class="left">
+              <li class="divider"></li>
+              <li class="active"><a href="#">Main Item 1</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Main Item 2</a></li>
+              <li class="divider"></li>
+              <li class="has-dropdown"><a href="#">Main Item 3</a>
+
+                <ul class="dropdown">
+                  <li class="has-dropdown"><a href="#">Dropdown Level 1a</a>
+
+                    <ul class="dropdown">
+                      <li><label>Dropdown Level 2 Label</label></li>
+                      <li><a href="#">Dropdown Level 2a</a></li>
+                      <li><a href="#">Dropdown Level 2b</a></li>
+                      <li class="has-dropdown"><a href="#">Dropdown Level 2c</a>
+
+                        <ul class="dropdown">
+                          <li><label>Dropdown Level 3 Label</label></li>
+                          <li><a href="#">Dropdown Level 3a</a></li>
+                          <li><a href="#">Dropdown Level 3b</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Dropdown Level 3c</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Dropdown Level 2d</a></li>
+                      <li><a href="#">Dropdown Level 2e</a></li>
+                      <li><a href="#">Dropdown Level 2f</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Dropdown Level 1b</a></li>
+                  <li><a href="#">Dropdown Level 1c</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Dropdown Level 1d</a></li>
+                  <li><a href="#">Dropdown Level 1e</a></li>
+                  <li><a href="#">Dropdown Level 1f</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">See all &rarr;</a></li>
+                </ul>
+              </li>
+              <li class="divider"></li>
+            </ul>
+
+            <!-- Right Nav Section -->
+            <ul class="right">
+              <li class="divider hide-for-small"></li>
+              <li class="has-dropdown"><a href="#">Main Item 4</a>
+
+                <ul class="dropdown">
+                  <li><label>Dropdown Level 1 Label</label></li>
+                  <li class="has-dropdown"><a href="#" class="">Dropdown Level 1a</a>
+
+                    <ul class="dropdown">
+                      <li><a href="#">Dropdown Level 2a</a></li>
+                      <li><a href="#">Dropdown Level 2b</a></li>
+                      <li class="has-dropdown"><a href="#">Dropdown Level 2c</a>
+
+                        <ul class="dropdown">
+                          <li><a href="#">Dropdown Level 3a</a></li>
+                          <li><a href="#">Dropdown Level 3b</a></li>
+                          <li><a href="#">Dropdown Level 3c</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Dropdown Level 2d</a></li>
+                      <li><a href="#">Dropdown Level 2e</a></li>
+                      <li><a href="#">Dropdown Level 2f</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Dropdown Level 1b</a></li>
+                  <li><a href="#">Dropdown Level 1c</a></li>
+                  <li class="divider"></li>
+                  <li><label>Dropdown Level 1 Label</label></li>
+                  <li><a href="#">Dropdown Level 1d</a></li>
+                  <li><a href="#">Dropdown Level 1e</a></li>
+                  <li><a href="#">Dropdown Level 1f</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">See all &rarr;</a></li>
+                </ul>
+              </li>
+              <li class="divider"></li>
+              <li class="has-form">
+                <form>
+                  <div class="row collapse">
+                    <div class="small-8 columns">
+                      <input type="text">
+                    </div>
+                    <div class="small-4 columns">
+                      <a href="#" class="alert button">Search</a>
+                    </div>
+                  </div>
+                </form>
+              </li>
+              <li class="divider show-for-small"></li>
+              <li class="has-form">
+                <a class="button" href="#">Button!</a>
+              </li>
+            </ul>
+          </section>
+        </nav>
+        <!-- Breadcrumbs -->
+        <ul class="breadcrumbs">
+            <li><a href="">Home</a></li>
+            <li><a href="">Services</a></li>
+            <li class="unavailable"><a href="">Coding</a></li>
+            <li class="current"><a href="#">Designing</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <h1>Labels</h1>
+        <p>
+            <span class="label">Regular Label</span><br>
+            <span class="radius secondary label">Radius Secondary Label</span><br>
+            <span class="round alert label">Round Alert Label</span><br>
+            <span class="success label">Success Label</span><br>
+        </p>
+    </div>
+    <div class="row">
+        <div class="small-12 large-12">
+            <h1>Buttons, Button Groups, etc.</h1>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Size Classes -->
+        <div class="large-3 small-3 columns">
+            <a href="#" class="button">Default Button</a>
+        </div>
+        <div class="large-3 small-3 columns">
+            <a href="#" class="tiny button">Tiny Button</a>
+        </div>
+        <div class="large-3 small-3 columns">
+            <a href="#" class="small button">Small Button</a>
+        </div>
+        <div class="large-3 small-3 columns">
+            <a href="#" class="large button">Large Button</a>
+        </div>
+        <!-- Color Classes -->
+        <div class="large-3 small-3 columns">
+            <a href="#" class="button secondary">Secondary Button</a>
+        </div>
+        <div class="large-3 small-3 columns">
+            <a href="#" class="button success">Success Button</a>
+        </div>
+        <div class="large-3 small-3 columns">
+            <a href="#" class="button alert">Alert Button</a>
+        </div>
+        <!-- Radius Classes -->
+        <div class="large-12 small-12 columns">
+            <a href="#" class="button round">Round Button</a>
+        </div>
+        <div class="large-12 small-12 columns">
+            <a href="#" class="button radius">Radius Button</a>
+        </div>
+        <!-- Disabled Class -->
+        <a href="#" class="button disabled">Disabled Button</a>
+
+        <!-- button-groups -->
+        <ul class="button-group">
+            <li><a href="#" class="small button">Button 1</a></li>
+            <li><a href="#" class="small button">Button 2</a></li>
+            <li><a href="#" class="small button">Button 3</a></li>
+        </ul>
+        <ul class="button-group round even-3">
+            <li><a href="#" class="button alert">Button 1</a></li>
+            <li><a href="#" class="button alert">Button 2</a></li>
+            <li><a href="#" class="button alert">Button 3</a></li>
+        </ul>
+        <div class="button-bar">
+            <ul class="button-group">
+                <li><a href="#" class="small button">Button 1</a></li>
+                <li><a href="#" class="small button">Button 2</a></li>
+                <li><a href="#" class="small button">Button 3</a></li>
+            </ul>
+            <ul class="button-group">
+                <li><a href="#" class="small button">Button 1</a></li>
+                <li><a href="#" class="small button">Button 2</a></li>
+                <li><a href="#" class="small button">Button 3</a></li>
+            </ul>
+        </div>
+        <a href="#" class="button dropdown">Default Button</a>
+        <a href="#" class="tiny button dropdown">Tiny Button</a>
+        <a href="#" class="small button dropdown">Small Button</a>
+        <a href="#" class="large button dropdown">Large Button</a>
+
+        <!-- Color Classes -->
+        <a href="#" class="button dropdown secondary">Secondary Button</a>
+        <a href="#" class="button dropdown success">Success Button</a>
+        <a href="#" class="button dropdown alert">Alert Button</a>
+
+        <!-- Radius Classes -->
+        <a href="#" class="button dropdown radius">Radius Button</a>
+        <a href="#" class="button dropdown round">Round Button</a>
+
+        <!-- Size Classes -->
+        <a href="#" class="button split">Default Button <span></span></a>
+        <a href="#" class="tiny button split">Tiny Button <span></span></a>
+        <a href="#" class="small button split">Small Button <span></span></a>
+        <a href="#" class="large button split">Large Button <span></span></a>
+
+        <!-- Color Classes -->
+        <a href="#" class="button split secondary">Secondary Button <span></span></a>
+        <a href="#" class="button split success">Success Button <span></span></a>
+        <a href="#" class="button split alert">Alert Button <span></span></a>
+
+        <!-- Radius Classes -->
+        <a href="#" class="button split radius">Radius Button <span></span></a>
+        <a href="#" class="button split round">Round Button <span></span></a>
+
+
+
+    <div class="row">
+        <h1>Forms</h1>
+        <p>Form elements are wrapped in grid specs so they can be positions and sized to your exact specification! For example, the following form uses row and columns grid techniques to control each for element's size. <i>Note that this only applies if you're using Zurb Foundation.</i></p>
+    </div>
+    <form>
+        <fieldset>
+            <legend>Fieldset</legend>
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>Input Label</label>
+                    <input type="text" placeholder="large-12.columns">
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-4 columns">
+                    <label>Input Label</label>
+                    <input type="text" placeholder="large-4.columns">
+                </div>
+                <div class="large-4 columns">
+                    <label>Input Label</label>
+                    <input type="text" placeholder="large-4.columns">
+                </div>
+                <div class="large-4 columns">
+                    <div class="row collapse">
+                        <label>Input Label</label>
+                        <div class="small-9 columns">
+                            <input type="text" placeholder="small-9.columns">
+                        </div>
+                        <div class="small-3 columns">
+                            <span class="postfix">.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>Textarea Label</label>
+                    <textarea placeholder="small-12.columns"></textarea>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <div class="row">
+        <h1>Inline Labels</h1>
+    </div>
+    <form>
+        <div class="row">
+            <div class="small-8">
+                <div class="row">
+                    <div class="small-3 columns">
+                        <label for="right-label" class="right inline">Label</label>
+                    </div>
+                    <div class="small-9 columns">
+                        <input type="text" id="right-label" placeholder="Inline Text Input">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <h1>Fieldsets</h1>
+    </div>
+    <form>
+        <fieldset>
+            <legend>My Fieldset Legend</legend>
+            <label>My Input Label</label>
+            <input type="text" placeholder="My input text...">
+        </fieldset>
+    </form>
+    <div class="row">
+        <h1>Pre/Postfix Labels & Actions</h1>
+    </div>
+    <form>
+        <div class="row collapse">
+            <div class="small-3 large-2 columns">
+                <span class="prefix">http://</span>
+            </div>
+            <div class="small-9 large-10 columns">
+                <input type="text" placeholder="Enter your URL...">
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+                <div class="row collapse">
+                    <div class="small-10 columns">
+                        <input type="text" placeholder="Hex Value">
+                    </div>
+                    <div class="small-2 columns">
+                        <a href="#" class="button prefix">Action</a>
+                    </div>
+                </div>
+            </div>
+            <div class="large-6 columns">
+                <div class="row collapse">
+                    <div class="small-9 columns">
+                        <input type="text" placeholder="Value">
+                    </div>
+                    <div class="small-3 columns">
+                        <span class="postfix radius">Label</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="row">
+        <h1>Error States</h1>
+    </div>
+    <form>
+        <div class="row">
+            <div class="large-6 columns">
+                <label class="error">Error</label>
+                <input type="text" class="error" />
+                <small class="error">Invalid entry</small>
+            </div>
+            <div class="large-6 columns error">
+                <label>Another Error</label>
+                <input type="text" />
+                <small>Invalid entry</small>
+            </div>
+        </div>
+        <textarea class="error" placeholder="Message..."></textarea>
+        <small class="error">Invalid entry</small>
+    </form>
+    <div class="row">
+        <h1>Sections</h1>
+        <div class="small-12 large-12 columns">
+            <div class="section-container accordion" data-section="accordion">
+                <section>
+                    <p class="title" data-section-title><a href="#">Section 1</a></p>
+                    <div class="content" data-section-content>
+                        <p>Content of section 1.</p>
+                    </div>
+                </section>
+                <section>
+                    <p class="title" data-section-title><a href="#">Section 2</a></p>
+                    <div class="content" data-section-content>
+                        <p>Content of section 2.</p>
+                    </div>
+                </section>
+            </div>
+            <hr>
+            <div class="section-container tabs" data-section="tabs">
+                <section>
+                    <p class="title" data-section-title><a href="#">Section 1</a></p>
+                    <div class="content" data-section-content>
+                        <p>Content of section 1.</p>
+                    </div>
+                </section>
+                <section>
+                    <p class="title" data-section-title><a href="#">Section 2</a></p>
+                    <div class="content" data-section-content>
+                        <p>Content of section 2.</p>
+                    </div>
+                </section>
+            </div>
+            <hr>
+            <div class="section-container vertical-tabs" data-section="vertical-tabs">
+                <section>
+                    <p class="title" data-section-title><a href="#">Section 1</a></p>
+                    <div class="content" data-section-content>
+                        <p>Content of section 1.</p>
+                    </div>
+                </section>
+                <section>
+                    <p class="title" data-section-title><a href="#">Section 2</a></p>
+                    <div class="content" data-section-content>
+                        <p>Content of section 2.</p>
+                    </div>
+                </section>
+                <section>
+                    <p class="title" data-section-title><a href="#">Section 3</a></p>
+                    <div class="content" data-section-content>
+                        <p>Content of section 3.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="large-3 columns">
+            <div class="section-container vertical-nav" data-section="vertical-nav" data-options="one_up: false;">
+                <section>
+                    <p class="title" data-section-title><a href="#">Section 1</a></p>
+                    <div class="content" data-section-content>
+                        <ul class="side-nav">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Link 1</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <p class="title" data-section-title><a href="#">Section 2</a></p>
+                    <div class="content" data-section-content>
+                        <ul class="side-nav">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Link 1</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="large-9 columns">
+            <p>Content to the right of the navigation.</p>
+        </div>
+        <div class="large-12 columns">
+            <div class="section-container horizontal-nav" data-section="horizontal-nav" data-options="one_up: false;">
+                <section>
+                    <p class="title" data-section-title><a href="#">Section 1</a></p>
+                    <div class="content" data-section-content>
+                        <ul class="side-nav">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Link 1</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <p class="title" data-section-title><a href="#">Section 2</a></p>
+                    <div class="content" data-section-content>
+                        <ul class="side-nav">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Link 1</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="large-9 columns">
+                <p>Content dropping down from navigation.</p>
+            </div>
+        </div>
+    </div>
+
+    </div><!-- Fini -->
+    <script src="components/jquery/jquery.js"></script>
+<script>
+document.write('<script src=' +
+('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
+'.js><\/script>')
+</script>
+    <script src="sass/zurb/js/foundation/foundation.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.alerts.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.clearing.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.cookie.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.dropdown.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.forms.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.interchange.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.joyride.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.magellan.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.orbit.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.placeholder.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.reveal.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.section.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.tooltips.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.topbar.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>

@@ -1,3 +1,6 @@
 [submodule "sass/colors"]
 	path = sass/colors
 	url = git://github.com/RichardBray/color-me-sass.git
+[submodule "sass/zurb"]
+	path = sass/zurb
+	url = git@github.com:zurb/foundation.git

@@ -33,8 +33,12 @@
 }
 .ws-settings {
   display: none;
-  //border: .25em solid $soft-white;
-  background: $grayTimberwolf;
+  color: $black;
+  h1,h2,h3,h4,h5,h6 {
+    color: $whiteSmoke;
+    @include single-text-shadow;
+  }
+  background: $gray-dark;
   padding: 10px;
   .stack {
     margin-bottom: .25em;
@@ -79,15 +83,13 @@
   display: block;
   position: relative;
   background: $pinkFlickr;
-  border: 2px solid $whiteSmoke;
   border-top: none;
   @include border-bottom-radius(8px);
-}
-.slider:hover {
-  color: $white;
-  border: 2px solid lighten($whiteSmoke, 3%);
-  @include single-text-shadow;
-  border-top: none;
+  &:hover {
+    color: $white;
+    @include single-text-shadow;
+    border-top: none;
+  }
 }
 .slider:after, .slider:before {
   top: 100%;
@@ -98,13 +100,11 @@
   position: absolute;
   pointer-events: none;
 }
-
 .slider:after {
-  //border-top-color: $orangeHackerNews;
   border-top-color: $pinkFlickr;
-  border-width: 7px;
+  border-width: 5px;
   left: 50%;
-  margin-left: -7px;
+  margin-left: -5px;
 }
 .slider:before {
   border-top-color: $whiteSmoke;
@@ -112,3 +112,24 @@
   left: 50%;
   margin-left: -10px;
 }
+
+// Hack to add an up arrow when slider is opened ... dealing with pseudo classes in jquery no fun unless you completely replace the whole css
+/*
+.up-arrow {
+  margin: 0 auto;
+  display: none;
+  border-width: 5px;
+  border: solid 5px transparent;
+  border-bottom-color: $pinkFlickr;
+  content: " ";
+  height: 0;
+  width: 0;
+}
+*/
+// -------- Slider opened styles
+/*
+.opened:after, opened:before {
+  border: solid transparent;
+  position: absolute;
+}
+*/

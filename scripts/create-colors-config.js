@@ -15,7 +15,7 @@ var path = require('path');
 var filedata = '';
 var colors = {};
 
-// argv[1] will be path to this script which is in: /full/path/to/<webstiles>/scripts
+// argv[1] will be path to this script which is in: /full/path/to/<ditbi>/scripts
 // we utlize that fact to build a path to our colors dir
 var colorsSource = path.join(path.dirname(process.argv[1]), '../sass/colors/colors');
 var colorsDest = path.join(path.dirname(process.argv[1]), 'js/colors.json');

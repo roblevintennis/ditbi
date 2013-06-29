@@ -1,7 +1,18 @@
 $(document).ready(function () {
 
+    // Toggles open/closed the settings drawer
     $(".slider").click(function(){
         $(".ws-settings").slideToggle("slow");
+    //     var isOpen = $(this).hasClass('opened');
+    //     if (isOpen) {
+    //         $(this).removeClass('opened');
+    //         $('.up-arrow').hide();
+    //     } else {
+    //         $(this).addClass('opened');
+    //         setTimeout(function() {
+    //             $('.up-arrow').show();
+    //         }, 75);
+    //     }
     });
     // Categorized colors e.g. _ambers, _blues, etc., from colors.js
     var colors = _colorz;
@@ -45,7 +56,7 @@ $(document).ready(function () {
      * up with whatever's set in the Sass/CSS. If we add new rules that use colors in the
      * CSS, we'll need to keep this consistent with those new rules so dynamic updates are
      * applied as expected.
-     * @param {String} group    The colors group e.g. 'color-1', 'color-6', etc.
+     * @param {String} group    The colors group e.g. 'primary-color', 'color-6', etc.
      * @param {String} newColor The new color. Can either by a key in to our color-me-sass
      * colors, or an actual color value e.g. `red` or `#ddd`.
      */
@@ -53,8 +64,8 @@ $(document).ready(function () {
         var colorKey = newColor;
         newColor = getColor(newColor);
         switch (group) {
-            case 'color-1':
-                console.log("In color-1");
+            case 'primary-color':
+                console.log("In primary-color");
                 $('.menu a').css('border', '.25em solid '+newColor);
                 $('input:focus, textarea:focus').css({'border-color': newColor});
                 $('input, textarea').focusin(function(evt) {
@@ -64,10 +75,11 @@ $(document).ready(function () {
                     $(evt.currentTarget).css('border-color', flattened['$whiteSmoke']);
                 });
                 // Changes all anchors colors (but NOT dynamic color-picker anchors)
-                $('a, a:link, a:visited').not('.ws-settings a').css('color', newColor);
+                $('a, a:link, a:visited').not('.ws-settings a').not('.button').css('color', newColor);
                 // Hack since :not(:hover) no longer works properly in latest jquery :(
                 $('.menu a').hover(
-                    function(evt) { $(evt.currentTarget).css({
+                    function(evt) {
+                        $(evt.currentTarget).css({
                             'color': flattened['$whiteSmoke'],
                             'background': newColor
                         });
@@ -79,44 +91,77 @@ $(document).ready(function () {
                         });
                     }
                 );
-                $('.color-1, .btn-primary').css('background', newColor);
+                // $('a.button.primary').css('background-color', newColor);
+                $('.primary').css('background-color', newColor);
+                $('.primary').hover(
+                    function(evt) {
+                        $(evt.currentTarget).css({'opacity':'0.85'});
+                    },
+                    function(evt) {
+                        $(evt.currentTarget).css({'opacity':'1.0'});
+                    }
+                );
                 $('.adj-1').css('color', newColor);
-                colorsInUse.color1 = colorKey;
+                colorsInUse.primaryColor = colorKey;
                 break;
-            case 'color-2':
-                console.log("In color-2");
-                $('.color-2, .btn-secondary').css('background', newColor);
+            case 'secondary-color':
+                console.log("In secondary-color");
+                $('.secondary-color, .secondary').css('background-color', newColor);
+                $('.secondary').hover(
+                    function(evt) {
+                        $(evt.currentTarget).css({'opacity':'0.85'});
+                    },
+                    function(evt) {
+                        $(evt.currentTarget).css({'opacity':'1.0'});
+                    }
+                );
                 $('.adj-2').css('color', newColor);
                 $('mark').css('background', newColor);
-                colorsInUse.color2 = colorKey;
+                colorsInUse.secondaryColor = colorKey;
                 break;
-            case 'color-3':
-                console.log("In color-3");
-                $('.color-3').css('background', newColor);
+            case 'alert-color':
+                console.log("In alert-color");
+                $('.alert-color, .button.alert').css('background-color', newColor);
+                $('.alert').hover(
+                    function(evt) {
+                        $(evt.currentTarget).css({'opacity':'0.75'});
+                    },
+                    function(evt) {
+                        $(evt.currentTarget).css({'opacity':'1.0'});
+                    }
+                );
                 $('.adj-3').css('color', newColor);
-                colorsInUse.color3 = colorKey;
+                colorsInUse.alertColor = colorKey;
                 break;
-            case 'color-4':
-                console.log("In color-4");
-                $('.color-4').css('background', newColor);
+            case 'success-color':
+                console.log("In success-color");
+                $('.success-color, .button.success').css('background-color', newColor);
+                $('.success').hover(
+                    function(evt) {
+                        $(evt.currentTarget).css({'opacity':'0.85'});
+                    },
+                    function(evt) {
+                        $(evt.currentTarget).css({'opacity':'1.0'});
+                    }
+                );
                 $('.adj-4').css('color', newColor);
-                colorsInUse.color4 = colorKey;
+                colorsInUse.successColor = colorKey;
                 break;
             case 'color-5':
                 console.log("In color-5");
-                $('.color-5').css('background', newColor);
+                $('.color-5').css('background-color', newColor);
                 $('.adj-5').css('color', newColor);
                 colorsInUse.color5 = colorKey;
                 break;
             case 'color-6':
                 console.log("In color-6");
-                $('.color-6').css('background', newColor);
+                $('.color-6').css('background-color', newColor);
                 $('.adj-6').css('color', newColor);
                 colorsInUse.color6 = colorKey;
                 break;
             case 'color-bg':
                 console.log("In color-bg");
-                $('body, .masthead').css('background', newColor);
+                $('body, .masthead').css('background-color', newColor);
                 colorsInUse.bg = colorKey;
                 break;
             default:
@@ -126,10 +171,10 @@ $(document).ready(function () {
     }
     // Default colors start as defined here
     var colorsInUse = {
-        color1: '$blueSky',
-        color2: '$orangeLight',
-        color3: '$redCrimson',
-        color4: '$greenGroupon',
+        primaryColor: '$blueSky',
+        secondaryColor: '$orangeLight',
+        alertColor: '$redCrimson',
+        successColor: '$greenGroupon',
         color5: '$graySilver',
         color6: '$brownChocolate',
         // custom colors mainly for border and typo
@@ -138,10 +183,10 @@ $(document).ready(function () {
         bg: '$whiteSmoke',
     };
     // This sort of makes our statically defined colors redundant
-    setCSSColor('color-1', colorsInUse.color1);
-    setCSSColor('color-2', colorsInUse.color2);
-    setCSSColor('color-3', colorsInUse.color3);
-    setCSSColor('color-4', colorsInUse.color4);
+    setCSSColor('primary-color', colorsInUse.primaryColor);
+    setCSSColor('secondary-color', colorsInUse.secondaryColor);
+    setCSSColor('alert-color', colorsInUse.alertColor);
+    setCSSColor('success-color', colorsInUse.successColor);
     setCSSColor('color-5', colorsInUse.color5);
     setCSSColor('color-6', colorsInUse.color6);
     setCSSColor('color-bg', colorsInUse.bg);
@@ -190,45 +235,45 @@ $(document).ready(function () {
         data: colorsForSelect2
     };
     // ============== Color-1 ============= //
-    $("#color-picker-1").val(colorsInUse.color1);//Set value attr so initSelection works
+    $("#color-picker-1").val(colorsInUse.primaryColor);//Set value attr so initSelection works
     $("#color-picker-1").select2(select2Options);
     $("#color-picker-1").on("change", function(e) {
-        setCSSColor('color-1', e.val);
+        setCSSColor('primary-color', e.val);
     });
     $("#color-picker-1").on("select2-highlight", function(e) {
-        setCSSColor('color-1', e.val);
+        setCSSColor('primary-color', e.val);
         setColorHint(e.val, this);
     });
     // ============== Color-2 ============= //
-    $("#color-picker-2").val(colorsInUse.color2);
+    $("#color-picker-2").val(colorsInUse.secondaryColor);
     $("#color-picker-2").select2(select2Options);
     $("#color-picker-2").on("change", function(e) {
-        setCSSColor('color-2', e.val);
+        setCSSColor('secondary-color', e.val);
     });
     $("#color-picker-2").on("select2-highlight", function(e) {
-        setCSSColor('color-2', e.val);
+        setCSSColor('secondary-color', e.val);
         setColorHint(e.val, this);
     });
     // ============== Color-3 ============= //
-    $("#color-picker-3").val(colorsInUse.color3);
+    $("#color-picker-3").val(colorsInUse.alertColor);
     $("#color-picker-3").select2(select2Options);
     $("#color-picker-3").on("change", function(e) {
         // console.log("change "+JSON.stringify({val:e.val, added:e.added, removed:e.removed}));
-        setCSSColor('color-3', e.val);
+        setCSSColor('alert-color', e.val);
     });
     $("#color-picker-3").on("select2-highlight", function(e) {
         // console.log("highlighted val="+ e.val+" choice="+ JSON.stringify(e.choice));
-        setCSSColor('color-3', e.val);
+        setCSSColor('alert-color', e.val);
         setColorHint(e.val, this);
     });
     // ============== Color-4 ============= //
-    $("#color-picker-4").val(colorsInUse.color4);
+    $("#color-picker-4").val(colorsInUse.successColor);
     $("#color-picker-4").select2(select2Options);
     $("#color-picker-4").on("change", function(e) {
-        setCSSColor('color-4', e.val);
+        setCSSColor('success-color', e.val);
     });
     $("#color-picker-4").on("select2-highlight", function(e) {
-        setCSSColor('color-4', e.val);
+        setCSSColor('success-color', e.val);
         setColorHint(e.val, this);
     });
     // ============== Color-5 ============= //
@@ -346,7 +391,7 @@ $(document).ready(function () {
     }
     var fontsInUse = {
         'main': '$tahoma-font-stack',
-        'titles': '$palatino-font-stack'
+        'titles': '$helvetica-font-stack'
     };
     var fontStacksForSelect2 = [
         { text: 'Serifs', children: getFontByGroup('serifs') },
@@ -382,10 +427,10 @@ $(document).ready(function () {
         exportSettings(
             '<h3>CSS</h3>'+
             '<pre>'+
-                '.color-1 { background: '+flattened[colorsInUse.color1]+'; }\n'+
-                '.color-2 { background: '+flattened[colorsInUse.color2]+'; }\n'+
-                '.color-3 { background: '+flattened[colorsInUse.color3]+'; }\n'+
-                '.color-4 { background: '+flattened[colorsInUse.color4]+'; }\n'+
+                '.primary-color { background: '+flattened[colorsInUse.primaryColor]+'; }\n'+
+                '.secondary-color { background: '+flattened[colorsInUse.secondaryColor]+'; }\n'+
+                '.alert-color { background: '+flattened[colorsInUse.alertColor]+'; }\n'+
+                '.success-color { background: '+flattened[colorsInUse.successColor]+'; }\n'+
                 '.color-5 { background: '+flattened[colorsInUse.color5]+'; }\n'+
                 '.color-6 { background: '+flattened[colorsInUse.color6]+'; }\n'+
                 '.bg { background: '+flattened[colorsInUse.bg]+'; }\n'+
@@ -396,10 +441,10 @@ $(document).ready(function () {
             '<pre>See: sass/colors/colors/_color-me-sass.scss</pre>'+
             '<p>These are from the excellent <a href="http://www.richbray.me/cms/" target="_new">color-me-sass</a> library</p>'+
             '<pre>'+
-                '.color-1 { background: '+colorsInUse.color1+'; }\n'+
-                '.color-2 { background: '+colorsInUse.color2+'; }\n'+
-                '.color-3 { background: '+colorsInUse.color3+'; }\n'+
-                '.color-4 { background: '+colorsInUse.color4+'; }\n'+
+                '.primary-color { background: '+colorsInUse.primaryColor+'; }\n'+
+                '.secondary-color { background: '+colorsInUse.secondaryColor+'; }\n'+
+                '.alert-color { background: '+colorsInUse.alertColor+'; }\n'+
+                '.success-color { background: '+colorsInUse.successColor+'; }\n'+
                 '.color-5 { background: '+colorsInUse.color5+'; }\n'+
                 '.color-6 { background: '+colorsInUse.color6+'; }\n'+
                 '.bg { background: '+colorsInUse.bg+'; }\n'+
@@ -409,10 +454,10 @@ $(document).ready(function () {
             '<h3>Less</h3>'+
             '<p>For these you will need to use the Less version of <a href="http://www.richbray.me/cms/" target="_new">color-me-sass</a></p>'+
             '<pre>'+
-                '.color-1 { background: '+colorsInUse.color1.replace('$','@')+'; }\n'+
-                '.color-2 { background: '+colorsInUse.color2.replace('$','@')+'; }\n'+
-                '.color-3 { background: '+colorsInUse.color3.replace('$','@')+'; }\n'+
-                '.color-4 { background: '+colorsInUse.color4.replace('$','@')+'; }\n'+
+                '.primary-color { background: '+colorsInUse.primaryColor.replace('$','@')+'; }\n'+
+                '.secondary-color { background: '+colorsInUse.secondaryColor.replace('$','@')+'; }\n'+
+                '.alert-color { background: '+colorsInUse.alertColor.replace('$','@')+'; }\n'+
+                '.success-color { background: '+colorsInUse.successColor.replace('$','@')+'; }\n'+
                 '.color-5 { background: '+colorsInUse.color5.replace('$','@')+'; }\n'+
                 '.color-6 { background: '+colorsInUse.color6.replace('$','@')+'; }\n'+
                 '.bg { background: '+colorsInUse.bg.replace('$','@')+'; }\n'+
@@ -426,10 +471,10 @@ $(document).ready(function () {
             '<p>Then in your main app.scss import it BEFORE foundation:</p>'+
             '<pre>@import "settings-overrides";</pre>'+
             '<pre>'+
-                '$primary-color: '+colorsInUse.color1+';\n'+
-                '$secondary-color: '+colorsInUse.color2+';\n'+
-                '$alert-color: '+colorsInUse.color3+';\n'+
-                '$success-color: '+colorsInUse.color4+';\n'+
+                '$primary-color: '+colorsInUse.primaryColor+';\n'+
+                '$secondary-color: '+colorsInUse.secondaryColor+';\n'+
+                '$alert-color: '+colorsInUse.alertColor+';\n'+
+                '$success-color: '+colorsInUse.successColor+';\n'+
                 '$body-bg: '+colorsInUse.bg+';\n'+
                 '$body-font-family: '+fontsInUse.main+';\n'+
                 '$header-font-family: '+fontsInUse.titles+';\n'+
@@ -441,7 +486,7 @@ $(document).ready(function () {
             '<p>You can find more clues on Bootstrap variable naming conventions in: <pre>sass/colors/colors/_bootstrap.scss</pre>'
         );
     });
-    // Pops up a new window where user can copy webstiles CSS/Sass/Less settings
+    // Pops up a new window where user can copy ditbi CSS/Sass/Less settings
     function exportSettings(content) {
         top.consoleRef=window.open('','settings-export',
             'width=500,height=850'
@@ -451,7 +496,7 @@ $(document).ready(function () {
             +',scrollbars=1'
             +',resizable=1', true);
         top.consoleRef.document.writeln(
-            '<html><head><title>Webstiles Settings Export</title></head>'
+            '<html><head><title>ditbi Settings Export</title></head>'
             +'<body bgcolor=white onLoad="self.focus()">'
             +content
             +'</body></html>');

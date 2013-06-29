@@ -2,20 +2,18 @@
 
 /*** =COLOR ***/
 
-[class^="color"] {
+[class^="swatch"] {
   height: 3.5em;
   border: 5px solid $whiteSmoke;
   @include box-shadow($grayTimberwolf 0px 0px 4px);
   @include border-radius(3px);
 }
-
-.color-1 { background: $blueSky; }
-.color-2 { background: $orangeLight; }
-.color-3 { background: $redCrimson; }
-.color-4 { background: $greenGroupon; }
+.primary-color { background: $blueSky; }
+.secondary-color { background: $orangeLight; }
+.alert-color { background: $redCrimson; }
+.success-color { background: $greenGroupon; }
 .color-5 { background: $graySilver; }
 .color-6 { background: $brownChocolate; }
-
 
 .adj-1 { color: $blueSky; }
 .adj-2 { color: $orangeLight; }

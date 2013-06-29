@@ -1,6 +1,20 @@
 # What is ditbi?
 
-[ditbi][ditbi] is a tool for designing in the browser interactively. Simply open up the index.htm page, click the settings button on the top of the page and select your color and typography settings. From there, you can click 'Export' to get CSS, Sass/SCSS, LESS, Zurb Foundation, Twitter Bootstrap settings. Paste those in to your project as you see fit and your off and running.
+[ditbi][ditbi] is a tool for designing in the browser interactively. Simply open up the index.htm page, click the settings button on the top of the page and select your color and typography settings. From there, you can click 'Export' to get CSS, Sass/SCSS, LESS, Zurb Foundation settings. Paste those in to your project as you see fit and your off and running.
+
+ditbi pulls in a few choice `git submodule` libs: [color-me-sass][color-me-sass] for some excellent colors to create your palette from, and [Zurb Foundation][foundation], used only for the generated styleguide. ditbi tries to use similar CSS class or id's as Foundation.
+
+# Fast Start
+
+This repo uses submodules so if you're going to pull in everything required you have to do:
+
+```bash
+# Add the –recursive flag to git clone command:
+git clone THIS_REPO_URL --recursive
+# Or, manually initialize submodules after the clone
+git clone THIS_REPO_URL && git submodule update --init --recursive
+```
+See https://twoguysarguing.wordpress.com/2010/11/14/tie-git-submodules-to-a-particular-commit-or-branch/ for details on how this works.
 
 # Sass How To
 
@@ -12,13 +26,13 @@ Using [ditbi][ditbi] is as simple as opening the `index.htm` page and playing ar
 [settingup]: https://github.com/roblevintennis/rapid-prototyping-book/blob/master/chapters/02_setting_up_for_rapid_dev.md
 [sasschapter]: https://github.com/roblevintennis/rapid-prototyping-book/blob/master/chapters/03_compass_sass.md
 
-If you just want to edit and go and you've obtained this via `git clone`, you'll need to enable the submodule for [color-me-sass][color-me-sass] as follows:
+If you just want to edit and go and you've obtained this via `git clone`, you'll need to enable the submodule for [color-me-sass][color-me-sass] and Zurb [Foundation] as follows:
 
 ```bash
-git submodule init && git submodule update
+git submodule update --init --recursive
 ```
 
-_To optionally sync [ditbi][ditbi] with the latest [color-me-sass][color-me-sass] submodule update, we have a Node.js script: `./scripts/create-colors-config.js` that will ensure that the very latest color-me-sass variables are being used from within ditbi (of course this requires Node.js!)_
+_To optionally sync [ditbi][ditbi] with the latest [color-me-sass][color-me-sass] submodule update, we have a Node.js script: `./scripts/create-colors-config.js` that will ensure that the very latest color-me-sass variables are being used from within ditbi (of course this requires Node.js!) If you're going to do this you should have cd'd to the submodule directory and pulled in a later version of [color-me-sass][color-me-sass] before this._
 
 ```bash
 ./scripts/create-colors-config.js
@@ -46,7 +60,6 @@ compass watch
 
 [scout]: http://mhs.github.io/scout-app/
 
-
 ## Contributors
 
 #### [Rob Levin](https://github.com/roblevintennis) - Lead Developer
@@ -55,6 +68,7 @@ compass watch
 [webstiles]: https://github.com/namanyayg/webstiles
 [ditbi]: https://github.com/roblevintennis/ditbi
 [color-me-sass]: https://github.com/RichardBray/color-me-sass
+[foundation]: https://github.com/zurb/foundation/tree/scss-standalone
 
 ## Project History
 
