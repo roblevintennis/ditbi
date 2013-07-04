@@ -3,11 +3,8 @@
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
 	<title>Your Site</title>
-
 	<meta name="viewport" content="width=device-width">
-
 	<link rel="stylesheet" href="css/style.css" />
 	<link href="css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <link href="components/select2/select2.css" rel="stylesheet"/>
@@ -17,93 +14,94 @@
 	<div class="row">
 		<!-- Zurb Foundation docs: If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid -->
 		<div class="small-6 columns">
-			<section class="ws-item">
-				<h1>Colors 1-6</h1>
-				<div class="stack">
-					<div class="sympl half s-half">
-						<input type="hidden full" id="color-picker-1" />
-					</div>
-					<div class="sympl half s-half">
-						Primary
-					</div>
+			<div class="row">
+				<div class="small-12 large-12 columns">
+					<h4>Colors</h4>
 				</div>
-				<div class="stack">
-					<div class="sympl half s-half">
-						<input type="hidden full" id="color-picker-2" />
-					</div>
-					<div class="sympl half s-half">
-						Secondary
-					</div>
+				<div class="small-12 large-6 columns">
+					<input type="hidden" id="color-picker-1" />
 				</div>
-				<div class="stack">
-					<div class="sympl half s-half">
-						<input type="hidden full" id="color-picker-3" />
-					</div>
-					<div class="sympl half s-half">
-						Alert
-					</div>
+				<div class="small-12 large-6 columns">
+					Primary
 				</div>
-				<div class="stack">
-					<div class="sympl half s-half">
-						<input type="hidden full" id="color-picker-4" />
-					</div>
-					<div class="sympl half s-half">
-						Success
-					</div>
+			</div>
+			<div class="row">
+				<div class="small-12 large-6 columns">
+					<input type="hidden" id="color-picker-2" />
 				</div>
-				<div class="stack">
-					<div class="sympl half s-half">
-						<input type="hidden full" id="color-picker-5" />
-					</div>
-					<div class="sympl half s-half">
-						Color 5
-					</div>
+				<div class="small-12 large-6 columns">
+					Secondary
 				</div>
-				<div class="stack">
-					<div class="sympl half s-half">
-						<input multiple type="hidden full" id="color-picker-6" />
-					</div>
-					<div class="sympl half s-half">
-						Color 6
-					</div>
+			</div>
+			<div class="row">
+				<div class="small-12 large-6 columns">
+					<input type="hidden" id="color-picker-3" />
 				</div>
-
-			</section>
+				<div class="small-12 large-6 columns">
+					Alert
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 large-6 columns">
+					<input type="hidden full" id="color-picker-4" />
+				</div>
+				<div class="small-12 large-6 columns">
+					Success
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 large-6 columns">
+					<input type="hidden full" id="color-picker-5" />
+				</div>
+				<div class="small-12 large-6 columns">
+					Color 5
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 large-6 columns">
+					<input multiple type="hidden full" id="color-picker-6" />
+				</div>
+				<div class="small-12 large-6 columns">
+					Color 6
+				</div>
+			</div>
 		</div>
 		<div class="small-6 columns">
-		<!-- <div class="sympl half"> -->
-			<section class="ws-item">
-				<h1>Background Color / Typography</h1>
-				<div class="stack">
-					<div class="sympl half s-half">
-						<input type="hidden full" id="color-picker-bg" />
-					</div>
-					<div class="sympl half s-half">
-						Background Color
-					</div>
+			<div class="row">
+				<div class="small-12 large-12 columns">
+					<h4>Background & Typography</h4>
 				</div>
-				<div class="stack">
-					<div class="sympl half s-half">
-						<input type="hidden full" id="font-picker-titles" />
-					</div>
-					<div class="sympl half s-half">
-						Titles font stack
-					</div>
+				<div class="small-12 large-6 columns">
+					<input type="hidden" id="color-picker-bg" />
 				</div>
-				<div class="stack">
-					<div class="sympl half s-half">
-						<input type="hidden full" id="font-picker" />
-					</div>
-					<div class="sympl half s-half">
-						Font stack
-					</div>
+				<div class="small-12 large-6 columns">
+					Background Color
 				</div>
-				<div class="stack">
-					<div class="export sympl full s-half">
-						<button class="full s-third button rounded primary">Export</button>
-					</div>
+			</div>
+			<div class="row">
+				<div class="small-12 large-6 columns">
+					<input type="hidden" id="font-picker-titles" />
 				</div>
-			</section>
+				<div class="small-12 large-6 columns">
+					<input type="hidden" id="font-picker-titles" />
+				</div>
+				<div class="small-12 large-6 columns">
+					Titles font stack
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 large-6 columns">
+					<input type="hidden" id="font-picker" />
+				</div>
+				<div class="small-12 large-6 columns">
+					Font stack
+				</div>
+			</div>
+			<div class="row">
+				<div class="export small-12 large-12 columns">
+					<button class="button primary large-12 small-9 column">Export</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -116,10 +114,10 @@
 	</div>
 </div>
 <div class="row">
-	<div class="small-12 columns">
+	<div class="small-9 large-12 columns">
 		<header class="masthead" role="banner">
 			<div class="logo">
-				<h1>Logo</h1>
+				<h1>Your Logo</h1>
 			</div>
 			<nav class="menu" role="navigation">
 				<ul>
@@ -138,23 +136,23 @@
 		<div class="small-6 columns">
 			<section class="ws-item ws-colors">
 				<h1>Colors</h1>
-				<div class="stack">
-					<div class="sympl onesixth s-half">
+				<div class="row">
+					<div class="small-6 large-2 columns">
 						<div class="swatch primary"></div>
 					</div>
-					<div class="sympl onesixth s-half">
+					<div class="small-6 large-2 columns">
 						<div class="swatch secondary-color"></div>
 					</div>
-					<div class="sympl onesixth s-half">
+					<div class="small-6 large-2 columns">
 						<div class="swatch alert-color"></div>
 					</div>
-					<div class="sympl onesixth s-half">
+					<div class="small-6 large-2 columns">
 						<div class="swatch success-color"></div>
 					</div>
-					<div class="sympl onesixth s-half">
+					<div class="small-6 large-2 columns">
 						<div class="swatch color-5"></div>
 					</div>
-					<div class="sympl onesixth s-half">
+					<div class="small-6 large-2 columns">
 						<div class="swatch color-6"></div>
 					</div>
 				</div>
@@ -163,20 +161,16 @@
 				<h1>Form</h1>
 				<form>
 		            <div class="row">
-<!-- 		                <div class="small-12 columns">
-		                    <label>Name</label>
-		                    <input type="url" placeholder="John Smith">
-		                </div> -->
 						<div class="small-12 columns">
 			                <label class="error">Company (required)</label>
 			                <input type="text" placeholder="Abc Inc." class="error">
 			                <small class="error">Invalid entry</small>
 			            </div>
-		                <div class="small-6 columns">
+		                <div class="small-12 large-6 columns">
 		                    <label>Email</label>
 							<input type="email" placeholder="your@email.com">
 		                </div>
-		                <div class="small-6 columns">
+		                <div class="small-12 large-6 columns">
 		                    <div class="row collapse">
 		                        <label>URL</label>
 		                        <div class="small-9 columns">
@@ -195,18 +189,18 @@
 		                </div>
 		            </div>
 		            <div class="row">
-	            		<div class="small-6 columns">
+		            	<div class="small-12 large-6 columns">
 	            			<a href="#" class="button primary">Primary Button</a>
 	            		</div>
-	            		<div class="small-6 columns">
+		            	<div class="small-12 large-6 columns">
 	            			<a href="#" class="button secondary">Secondary Button</a>
 	            		</div>
 					</div>
 		            <div class="row">
-	            		<div class="small-6 columns">
+		            	<div class="small-12 large-6 columns">
 	            			<a href="#" class="button success">Success Button</a>
 	            		</div>
-	            		<div class="small-6 columns">
+		            	<div class="small-12 large-6 columns">
 	            			<a href="#" class="button alert">Alert Button</a>
 	            		</div>
 	            	</div>
@@ -216,42 +210,52 @@
 	            		</div>
 	            	</div>
 		        </form>
-				</section><!-- /.ws-form -->
+			</section><!-- /.ws-form -->
 		</div>
 		<div class="small-6 columns">
-			<section class="ws-item ws-typography">
-				<h1>Typography</h1>
-				<aside>
-					<h1>Level One Heading</h1>
-					<h2>Level Two Heading</h2>
-					<h3>Level Three Heading</h3>
-					<p>Marshall, Will, and Holly on a  <a href="#">routine expedition</a>, met the greatest earthquake ever known. High on the rapids, it struck their tiny raft! And <strong>plunged</strong> them down a thousand feet below... to the <em>Land of the Lost! Lost! Lost!</em></p>
-					<p>There's a holdout in the Bronx, Brooklyn's broken out in fights. There's a traffic jam in <a href="#">Harlem</a> that's backed up to Jackson Heights.</p>
-				</aside>
-			</section>
-			<section class="ws-item ws-adjectives">
-				<h1>Adjectives</h1>
-				<div class="stack">
-					<div class="adj-1 sympl onehalf s-half">
-						Fresh
-					</div>
-					<div class="adj-2 sympl onehalf s-half">
-						Clean
-					</div>
-					<div class="adj-3 sympl onehalf s-half">
-						Fun
-					</div>
-					<div class="adj-4 sympl onehalf s-half">
-						Simple
-					</div>
-					<div class="adj-5 sympl onehalf s-half">
-						Flat
-					</div>
-					<div class="adj-6 sympl onehalf s-half">
-						Modern
-					</div>
+			<div class="row">
+				<div class="small-12 columns">
+					<section class="ws-item ws-typography">
+						<h1>Typography</h1>
+						<aside>
+							<h1>Level One Heading</h1>
+							<h2>Level Two Heading</h2>
+							<h3>Level Three Heading</h3>
+							<p>Marshall, Will, and Holly on a  <a href="#">routine expedition</a>, met the <em>greatest earthquake ever known</em>. High on the rapids, it <strong>struck</strong> their tiny raft!</p>
+							<p>There's a holdout in the Bronx, Brooklyn's broken out in fights. There's a traffic jam in <a href="#">Harlem</a> that's backed up to Jackson Heights.</p>
+						</aside>
+					</section>
 				</div>
-			</section>
+			</div>
+			<div class="row">
+				<div class="small-12 columns">
+					<section class="ws-item ws-adjectives">
+						<h1>Adjectives</h1>
+						<div class="row">
+							<div class="adj-1 small-12 large-4 columns">
+								Fresh
+							</div>
+							<div class="adj-2 small-12 large-4 columns">
+								Clean
+							</div>
+							<div class="adj-3 small-12 large-4 columns">
+								Fun
+							</div>
+						</div>
+						<div class="row">
+							<div class="adj-4 small-12 large-4 columns">
+								Simple
+							</div>
+							<div class="adj-5 small-12 large-4 columns">
+								Flat
+							</div>
+							<div class="adj-6 small-12 large-4 columns">
+								Modern
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

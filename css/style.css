@@ -6453,366 +6453,66 @@ a:hover, a:active, a:focus {
   border-bottom-color: #d2d2d2;
 }
 
-/*
-=Grid
-*/
-/* line 6, ../sass/partials/_grids.scss */
-.stack {
-  /* A set of grid items must be in a stack.
-  Use sympl-stack when you want a margin at the bottom */
-  clear: both;
-  margin: 0 0 0 -1.5em;
-}
-
-/* line 13, ../sass/partials/_grids.scss */
-.stack-sympl {
-  padding-bottom: 1.5em;
-}
-
-/* line 17, ../sass/partials/_grids.scss */
-.stack-clean {
-  padding-bottom: 0;
-  padding-top: 1.5em;
-}
-
-/* line 18, ../sass/partials/_grids.scss */
-.stack-clean .sympl {
-  padding-bottom: 1.5em;
-}
-
-/* line 20, ../sass/partials/_grids.scss */
-.sympl {
-  /* Each grid item should have the sympl class, along with at least one class for size */
-  float: left;
-  padding: 0 0 0 1.5em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 31, ../sass/partials/_grids.scss */
-.stack:before,
-.stack:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-/* line 36, ../sass/partials/_grids.scss */
-.stack:after {
-  clear: both;
-}
-
-/* line 40, ../sass/partials/_grids.scss */
-.full, .twohalfs, .threethirds {
-  width: 100%;
-}
-
-/* line 41, ../sass/partials/_grids.scss */
-.half, .twoquarters, .threesixths {
-  width: 50%;
-}
-
-/* line 43, ../sass/partials/_grids.scss */
-.onethird, .twosixths {
-  width: 33.333333%;
-}
-
-/* line 44, ../sass/partials/_grids.scss */
-.twothirds, .foursixths {
-  width: 66.666666%;
-}
-
-/* line 46, ../sass/partials/_grids.scss */
-.quarter {
-  width: 25%;
-}
-
-/* line 47, ../sass/partials/_grids.scss */
-.three-quarters {
-  width: 75%;
-}
-
-/* line 49, ../sass/partials/_grids.scss */
-.onefifth {
-  width: 20%;
-}
-
-/* line 50, ../sass/partials/_grids.scss */
-.twofifths {
-  width: 40%;
-}
-
-/* line 51, ../sass/partials/_grids.scss */
-.threefifths {
-  width: 60%;
-}
-
-/* line 52, ../sass/partials/_grids.scss */
-.fourfifths {
-  width: 80%;
-}
-
-/* line 54, ../sass/partials/_grids.scss */
-.onesixth {
-  width: 16.666666%;
-}
-
-/* line 55, ../sass/partials/_grids.scss */
-.fivesixths {
-  width: 83.333333%;
-}
-
-/*
-=Media Queries
-*/
-/* L stands for large. L styles get triggered at 60em, that is, 960px */
-@media (max-width: 60em) {
-  /* line 8, ../sass/partials/_mq.scss */
-  .l-full {
-    width: 100%;
-  }
-
-  /* line 10, ../sass/partials/_mq.scss */
-  .l-half, .l-twoquarters, .l-threesixths {
-    width: 50%;
-  }
-
-  /* line 12, ../sass/partials/_mq.scss */
-  .l-onethird, .l-twosixths {
-    width: 33.333333%;
-  }
-
-  /* line 13, ../sass/partials/_mq.scss */
-  .l-twothirds, .l-foursixths {
-    width: 66.666666%;
-  }
-
-  /* line 15, ../sass/partials/_mq.scss */
-  .l-quarter {
-    width: 25%;
-  }
-
-  /* line 16, ../sass/partials/_mq.scss */
-  .l-three-quarters {
-    width: 75%;
-  }
-
-  /* line 18, ../sass/partials/_mq.scss */
-  .l-onefifth {
-    width: 20%;
-  }
-
-  /* line 19, ../sass/partials/_mq.scss */
-  .l-twofifths {
-    width: 40%;
-  }
-
-  /* line 20, ../sass/partials/_mq.scss */
-  .l-threefifths {
-    width: 60%;
-  }
-
-  /* line 21, ../sass/partials/_mq.scss */
-  .l-fourfifths {
-    width: 80%;
-  }
-
-  /* line 23, ../sass/partials/_mq.scss */
-  .l-onesixth {
-    width: 16.666666%;
-  }
-
-  /* line 24, ../sass/partials/_mq.scss */
-  .l-fivesixths {
-    width: 83.333333%;
-  }
-
-  /* line 26, ../sass/partials/_mq.scss */
-  .hide-l-and-below {
-    display: none;
-    visibility: hidden;
-  }
-
-  /* line 27, ../sass/partials/_mq.scss */
-  .show-l-and-below {
-    display: block;
-    visibility: visible;
-  }
-}
-@media (max-width: 60em) and (min-width: 45em) {
-  /* line 31, ../sass/partials/_mq.scss */
-  .hide-on-l {
-    display: none;
-    visibility: hidden;
-  }
-
-  /* line 32, ../sass/partials/_mq.scss */
-  .show-on-l {
-    display: block;
-    visibility: visible;
-  }
-}
-/* M stands for medium. M styles get triggered at 45em, that is, 720px */
-@media (max-width: 45em) {
-  /* line 38, ../sass/partials/_mq.scss */
-  .m-full {
-    width: 100%;
-  }
-
-  /* line 40, ../sass/partials/_mq.scss */
-  .m-half, .m-twoquarters {
-    width: 50%;
-  }
-
-  /* line 42, ../sass/partials/_mq.scss */
-  .m-onethird {
-    width: 33.333333%;
-  }
-
-  /* line 43, ../sass/partials/_mq.scss */
-  .m-twothirds {
-    width: 66.666666%;
-  }
-
-  /* line 45, ../sass/partials/_mq.scss */
-  .m-quarter {
-    width: 25%;
-  }
-
-  /* line 46, ../sass/partials/_mq.scss */
-  .m-three-quarters {
-    width: 75%;
-  }
-
-  /* line 48, ../sass/partials/_mq.scss */
-  .hide-m-and-below {
-    display: none;
-    visibility: hidden;
-  }
-
-  /* line 49, ../sass/partials/_mq.scss */
-  .show-m-and-below {
-    display: block;
-    visibility: visible;
-  }
-}
-@media (max-width: 45em) and (min-width: 30em) {
-  /* line 53, ../sass/partials/_mq.scss */
-  .hide-on-m {
-    display: none;
-    visibility: hidden;
-  }
-
-  /* line 54, ../sass/partials/_mq.scss */
-  .show-on-m {
-    display: block;
-    visibility: visible;
-  }
-}
-/* S stands for small. S styles get triggered at 30em, ie, 480px */
-@media (max-width: 30em) {
-  /* line 60, ../sass/partials/_mq.scss */
-  .sympl {
-    width: 100%;
-  }
-
-  /* line 62, ../sass/partials/_mq.scss */
-  .s-full {
-    width: 100%;
-  }
-
-  /* line 64, ../sass/partials/_mq.scss */
-  .s-half, .s-twoquarters {
-    width: 50%;
-  }
-
-  /* line 66, ../sass/partials/_mq.scss */
-  .s-onethird {
-    width: 33.333333%;
-  }
-
-  /* line 67, ../sass/partials/_mq.scss */
-  .s-twothirds {
-    width: 66.666666%;
-  }
-
-  /* line 69, ../sass/partials/_mq.scss */
-  .hide-on-s {
-    display: none;
-    visibility: hidden;
-  }
-
-  /* line 70, ../sass/partials/_mq.scss */
-  .show-on-s {
-    display: block;
-    visibility: visible;
-  }
-}
-/*====================
-=CUSTOM
-====================*/
-/* line 6, ../sass/partials/_custom.scss */
+/* line 2, ../sass/partials/_custom.scss */
 .wrap {
   width: 80em;
   max-width: 95%;
   margin: 0 auto;
 }
 
-/* line 12, ../sass/partials/_custom.scss */
+/* line 7, ../sass/partials/_custom.scss */
 .ws-item {
   margin-bottom: 2em;
 }
-/* line 14, ../sass/partials/_custom.scss */
+/* line 9, ../sass/partials/_custom.scss */
 .ws-item > h1 {
   font-size: 1.5em;
   color: #9f9f9f;
   margin: 1em 0 1em 0;
 }
-/* line 19, ../sass/partials/_custom.scss */
+/* line 14, ../sass/partials/_custom.scss */
 .ws-item h1:first-of-type {
   margin: 0em 0 .5em 0;
 }
 
 /*** =ADJECTIVES ***/
-/* line 25, ../sass/partials/_custom.scss */
+/* line 19, ../sass/partials/_custom.scss */
 .ws-adjectives div {
   font-size: 1.5em;
   padding-bottom: .25em;
 }
 
-/* line 31, ../sass/partials/_custom.scss */
+/* line 25, ../sass/partials/_custom.scss */
 .ws-item.ws-adjectives {
   margin-bottom: .5em;
 }
 
-/* line 34, ../sass/partials/_custom.scss */
+/* line 28, ../sass/partials/_custom.scss */
 .ws-settings {
   display: none;
   color: #222222;
   background: #9f9f9f;
   padding: 10px;
 }
-/* line 37, ../sass/partials/_custom.scss */
+/* line 31, ../sass/partials/_custom.scss */
 .ws-settings h1, .ws-settings h2, .ws-settings h3, .ws-settings h4, .ws-settings h5, .ws-settings h6 {
   color: whitesmoke;
   text-shadow: 0px 0px 1px #aaaaaa;
 }
-/* line 43, ../sass/partials/_custom.scss */
+/* line 37, ../sass/partials/_custom.scss */
 .ws-settings .stack {
   margin-bottom: .25em;
 }
-/* line 46, ../sass/partials/_custom.scss */
+/* line 40, ../sass/partials/_custom.scss */
 .ws-settings .ws-item {
   margin-bottom: 0px;
 }
 
-/* line 51, ../sass/partials/_custom.scss */
+/* line 45, ../sass/partials/_custom.scss */
 .ws-code {
   padding: 10px;
 }
-/* line 54, ../sass/partials/_custom.scss */
+/* line 48, ../sass/partials/_custom.scss */
 .ws-code > h1 {
   font-size: .875em;
   color: #9f9f9f;
@@ -6820,7 +6520,7 @@ a:hover, a:active, a:focus {
 }
 
 /*** =COLOPHON ***/
-/* line 61, ../sass/partials/_custom.scss */
+/* line 55, ../sass/partials/_custom.scss */
 .colophon {
   clear: both;
   text-align: center;
@@ -6830,19 +6530,19 @@ a:hover, a:active, a:focus {
   margin-top: 1.714em;
 }
 
-/* line 70, ../sass/partials/_custom.scss */
+/* line 64, ../sass/partials/_custom.scss */
 .export {
   margin-top: 1em;
 }
 
-/* line 73, ../sass/partials/_custom.scss */
+/* line 67, ../sass/partials/_custom.scss */
 .slider-wrap {
   margin: 0;
   padding: 0;
   border-top: solid 3px #5e4c3a;
 }
 
-/* line 77, ../sass/partials/_custom.scss */
+/* line 71, ../sass/partials/_custom.scss */
 .slider {
   color: #f2ede9;
   width: 10em;
@@ -6860,14 +6560,14 @@ a:hover, a:active, a:focus {
   -webkit-border-bottom-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-/* line 88, ../sass/partials/_custom.scss */
+/* line 82, ../sass/partials/_custom.scss */
 .slider:hover {
   color: white;
   text-shadow: 0px 0px 1px #aaaaaa;
   border-top: none;
 }
 
-/* line 94, ../sass/partials/_custom.scss */
+/* line 88, ../sass/partials/_custom.scss */
 .slider:after, .slider:before {
   top: 100%;
   border: solid transparent;
@@ -6878,7 +6578,7 @@ a:hover, a:active, a:focus {
   pointer-events: none;
 }
 
-/* line 103, ../sass/partials/_custom.scss */
+/* line 97, ../sass/partials/_custom.scss */
 .slider:after {
   border-top-color: #ff0084;
   border-width: 5px;
@@ -6886,7 +6586,7 @@ a:hover, a:active, a:focus {
   margin-left: -5px;
 }
 
-/* line 109, ../sass/partials/_custom.scss */
+/* line 103, ../sass/partials/_custom.scss */
 .slider:before {
   border-top-color: whitesmoke;
   border-width: 10px;

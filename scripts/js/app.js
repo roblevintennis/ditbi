@@ -437,6 +437,24 @@ $(document).ready(function () {
                 '.font-main { font-family: '+flattenedFonts[fontsInUse.main]+'; }\n'+
                 '.font-title { font-family: '+flattenedFonts[fontsInUse.titles]+'; }\n'+
             '</pre>'+
+            '<h3>Zurb Foundation</h3>'+
+            '<p><i>Assumes inclusion of <a href="http://www.richbray.me/cms/" target="_new">color-me-sass</a> library, but you can alternatively just copy over the values from the CSS section above.</i></p>'+
+            '<p>Find the following file and move to your project copying the variable values below:</p>'+
+            '<pre>sass/partials/_settings-overrides.scss</pre>'+
+            '<p>In your main app.scss or base.scss, etc., import it BEFORE foundation:</p>'+
+            '<pre>@import "settings-overrides";</pre>'+
+            '<p>Here are the values you should copy in to this file:</p>'+
+            '<pre>'+
+                '$primary-color: '+colorsInUse.primaryColor+';\n'+
+                '$secondary-color: '+colorsInUse.secondaryColor+';\n'+
+                '$alert-color: '+colorsInUse.alertColor+';\n'+
+                '$success-color: '+colorsInUse.successColor+';\n'+
+                '$body-bg: '+colorsInUse.bg+';\n'+
+                '/* These fonts require the partial: sass/partials/_font-stack.scss. Altneratively, copy over values from CSS section above */\n'+
+                '$body-font-family: '+fontsInUse.main+';\n'+
+                '$header-font-family: '+fontsInUse.titles+';\n'+
+            '</pre>' +
+            '<p>If you do not want to include color-me-sass, simply replace with literal values from CSS section above.<p>'+
             '<h3>Sass</h3>'+
             '<pre>See: sass/colors/colors/_color-me-sass.scss</pre>'+
             '<p>These are from the excellent <a href="http://www.richbray.me/cms/" target="_new">color-me-sass</a> library</p>'+
@@ -448,6 +466,7 @@ $(document).ready(function () {
                 '.color-5 { background: '+colorsInUse.color5+'; }\n'+
                 '.color-6 { background: '+colorsInUse.color6+'; }\n'+
                 '.bg { background: '+colorsInUse.bg+'; }\n'+
+                '/* These fonts require the partial: sass/partials/_font-stack.scss. Altneratively, copy over values from CSS section above */\n'+
                 '.font-main { font-family: '+fontsInUse.main+'; }\n'+
                 '.font-title { font-family: '+fontsInUse.titles+'; }\n'+
             '</pre>'+
@@ -461,25 +480,11 @@ $(document).ready(function () {
                 '.color-5 { background: '+colorsInUse.color5.replace('$','@')+'; }\n'+
                 '.color-6 { background: '+colorsInUse.color6.replace('$','@')+'; }\n'+
                 '.bg { background: '+colorsInUse.bg.replace('$','@')+'; }\n'+
+                '/* These fonts require the partial: sass/partials/_font-stack.scss. Altneratively, copy over values from CSS section above */\n'+
                 '.font-main { font-family: '+fontsInUse.main.replace('$','@')+'; }\n'+
                 '.font-title { font-family: '+fontsInUse.titles.replace('$','@')+'; }\n'+
             '</pre>' +
-            '<h3>Zurb Foundation</h3>'+
-            '<p><i>Assumes inclusion of <a href="http://www.richbray.me/cms/" target="_new">color-me-sass</a> library</i></p>'+
-            '<p>Create a file in your project such as:</p>'+
-            '<pre>myapp/sass/_settings-overrides.scss</pre>'+
-            '<p>Then in your main app.scss import it BEFORE foundation:</p>'+
-            '<pre>@import "settings-overrides";</pre>'+
-            '<pre>'+
-                '$primary-color: '+colorsInUse.primaryColor+';\n'+
-                '$secondary-color: '+colorsInUse.secondaryColor+';\n'+
-                '$alert-color: '+colorsInUse.alertColor+';\n'+
-                '$success-color: '+colorsInUse.successColor+';\n'+
-                '$body-bg: '+colorsInUse.bg+';\n'+
-                '$body-font-family: '+fontsInUse.main+';\n'+
-                '$header-font-family: '+fontsInUse.titles+';\n'+
-            '</pre>' +
-            '<p>If you do not want to include color-me-sass, simply replace with literal values from CSS section above.<p>'+
+
             '<h3>Twitter Bootstrap</h3>'+
             '<p>Bootstrap requires some fiddling because they do not use names like <pre>primary-color secondary-color ...</pre> But hope is not lost...you can still use the above LESS settings to customize <a href="https://github.com/twitter/bootstrap">Bootstrap</a> by simply overriding the <a href="https://github.com/twitter/bootstrap/blob/master/less/variables.less">variables.less file</a> by creating your own <pre>variables-overrides.less</pre> file, and include it AFTER the bootstrap _variables.less partial. Then simply edit to taste. Disclaimer: You must know how to compile LESS and also be using color-me-sass!</p>' +
             '<p>Suggestions: In your variables override file, you may redefine colors in the "Accent colors" section like: <pre>@blue @red</pre> In the Typography section replace variables like: <pre>@sansFontFamily @serifFontFamily</pre> Just look around in there as their definitions are self-evident.' +

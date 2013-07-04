@@ -1,14 +1,9 @@
-
-/*====================
-=CUSTOM
-====================*/
-
+// Custom
 .wrap {
   width: 80em;
   max-width: 95%;
   margin: 0 auto;
 }
-
 .ws-item {
   margin-bottom: 2em;
   & > h1 {
@@ -20,7 +15,6 @@
     margin: 0em 0 .5em 0;
   }
 }
-
 /*** =ADJECTIVES ***/
 .ws-adjectives div {
   font-size: 1.5em;
