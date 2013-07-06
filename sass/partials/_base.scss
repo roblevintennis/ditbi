@@ -1,9 +1,8 @@
-/*! Sympl http://github.com/namanyayg/sympl | MIT License | Namanyay Goel http://namanyayg.com/ */
-/*! Sympl.css v3.0.0 sympl.namanyayg.com |
-Namanyay Goel | www.namanyayg.com | @namanyayg */
-
-// Custom foundation settings overrides
 @import 'zurb/scss/foundation/variables';
+@import 'partials/font-stack';
+@import 'colors/color-me-sass';
+@import 'colors/colors/_preboot';//for some reason color-me-sass doesn't include this :(
+// Custom foundation settings overrides
 @import 'partials/settings-overrides';//overrides above variables partial
 
 // Zurb Foundation Partials
@@ -43,14 +42,5 @@ Namanyay Goel | www.namanyayg.com | @namanyayg */
 @import "zurb/scss/foundation/components/tooltips";
 @import "zurb/scss/foundation/components/dropdown";
 
-// Custom overrides for foundation
-@import "partials/foundation-overrides";
-@import 'partials/font-stack';
-@import 'colors/color-me-sass';
-@import 'partials/colors';
-@import 'partials/core';
-@import 'partials/custom';
-@import 'partials/masthead';
-@import 'partials/forms';
-@import 'partials/typography';
+
 

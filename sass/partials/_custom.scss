@@ -41,6 +41,9 @@
     // Makes settings padding less so we can see more of the page being styled
     margin-bottom: 0px;
   }
+  .row .row {
+    margin-bottom: 0.5em;
+  }
 }
 .ws-code {
   //border: .25em solid $soft-white;
@@ -61,18 +64,20 @@
   margin-top: 1.714em;
 }
 
-.export {
-  margin-top: 1em;
+.export, .styleguide {
+  margin-top: 0.65em;
 }
+
 .slider-wrap {
   margin: 0; padding: 0;
   border-top: solid 3px $brownDuller;
+  min-height: 2.75em;
 }
 .slider {
   color: darken($whiteIsabelline, 1%);
   width: 10em;
   text-align: center;
-  padding: .3em 1em;
+  padding: .5em 1em .65em;
   margin: 0 auto;
   display: block;
   position: relative;

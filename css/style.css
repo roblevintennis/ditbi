@@ -8,18 +8,516 @@ Under MIT License.
 https://github.com/namanyayg/webstiles.
 
 */
-/* Sympl http://github.com/namanyayg/sympl | MIT License | Namanyay Goel http://namanyayg.com/ */
-/* Sympl.css v3.0.0 sympl.namanyayg.com |
-Namanyay Goel | www.namanyayg.com | @namanyayg */
+/**
+ * Downloaded from: https://github.com/lloydk/font-stack/blob/master/lib/stylesheets/_font-stack.scss
+ */
 /*
-$primary-color: #73c2fb;
-$secondary-color: #FF944D;
-$alert-color: #dc143c;
-$success-color: #82b548;
-$body-bg: #f5f5f5;
-$body-font-family: Tahoma, Geneva, Verdana, sans-serif;
-$header-font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+ *
+ * Color Me SASS v1.0
+ * Built and Designed by Richard Bray
+ *
+ */
+/* line 1, ../sass/partials/_foundation-overrides.scss */
+.panel {
+  border-color: pink;
+  background: lightpink;
+}
+
+/* line 5, ../sass/partials/_foundation-overrides.scss */
+.display {
+  background: #eee;
+  margin-bottom: 10px;
+}
+/* line 8, ../sass/partials/_foundation-overrides.scss */
+.display .columns {
+  background: #e7e7e7;
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: .5em;
+}
+
+/*** =COLOR ***/
+/* line 5, ../sass/partials/_colors.scss */
+[class^="swatch"] {
+  height: 3.5em;
+  border: 5px solid whitesmoke;
+  -webkit-box-shadow: #dbd7d2 0px 0px 4px;
+  -moz-box-shadow: #dbd7d2 0px 0px 4px;
+  box-shadow: #dbd7d2 0px 0px 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 11, ../sass/partials/_colors.scss */
+.primary-color {
+  background: #73c2fb;
+}
+
+/* line 12, ../sass/partials/_colors.scss */
+.secondary-color {
+  background: #ff944d;
+}
+
+/* line 13, ../sass/partials/_colors.scss */
+.alert-color {
+  background: crimson;
+}
+
+/* line 14, ../sass/partials/_colors.scss */
+.success-color {
+  background: #82b548;
+}
+
+/* line 15, ../sass/partials/_colors.scss */
+.color-5 {
+  background: silver;
+}
+
+/* line 16, ../sass/partials/_colors.scss */
+.color-6 {
+  background: #7b3f00;
+}
+
+/* line 18, ../sass/partials/_colors.scss */
+.adj-1 {
+  color: #73c2fb;
+}
+
+/* line 19, ../sass/partials/_colors.scss */
+.adj-2 {
+  color: #ff944d;
+}
+
+/* line 20, ../sass/partials/_colors.scss */
+.adj-3 {
+  color: crimson;
+}
+
+/* line 21, ../sass/partials/_colors.scss */
+.adj-4 {
+  color: #82b548;
+}
+
+/* line 22, ../sass/partials/_colors.scss */
+.adj-5 {
+  color: silver;
+}
+
+/* line 23, ../sass/partials/_colors.scss */
+.adj-6 {
+  color: #7b3f00;
+}
+
+/* line 37, ../sass/partials/_colors.scss */
+fieldset {
+  border-color: silver;
+}
+
+/* line 38, ../sass/partials/_colors.scss */
+mark {
+  background: #ff944d;
+  color: black;
+}
+
+/* line 2, ../sass/partials/_core.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, ../sass/partials/_core.scss */
+body, input, textarea, button, form, select {
+  font: 100%/1.5 Tahoma, Geneva, Verdana, sans-serif;
+  color: #414141;
+}
+
+/* line 10, ../sass/partials/_core.scss */
+textarea {
+  height: inherit;
+}
+
+/* line 14, ../sass/partials/_core.scss */
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #73c2fb;
+  border-bottom: thin solid transparent;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+/* line 22, ../sass/partials/_core.scss */
+a.button {
+  color: white;
+}
+
+/* line 25, ../sass/partials/_core.scss */
+a:hover, a:active, a:focus {
+  border-bottom-color: #d2d2d2;
+}
+
+/* line 2, ../sass/partials/_custom.scss */
+.wrap {
+  width: 80em;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/* line 7, ../sass/partials/_custom.scss */
+.ws-item {
+  margin-bottom: 2em;
+}
+/* line 9, ../sass/partials/_custom.scss */
+.ws-item > h1 {
+  font-size: 1.5em;
+  color: #9f9f9f;
+  margin: 1em 0 1em 0;
+}
+/* line 14, ../sass/partials/_custom.scss */
+.ws-item h1:first-of-type {
+  margin: 0em 0 .5em 0;
+}
+
+/*** =ADJECTIVES ***/
+/* line 19, ../sass/partials/_custom.scss */
+.ws-adjectives div {
+  font-size: 1.5em;
+  padding-bottom: .25em;
+}
+
+/* line 25, ../sass/partials/_custom.scss */
+.ws-item.ws-adjectives {
+  margin-bottom: .5em;
+}
+
+/* line 28, ../sass/partials/_custom.scss */
+.ws-settings {
+  display: none;
+  color: #222222;
+  background: #9f9f9f;
+  padding: 10px;
+}
+/* line 31, ../sass/partials/_custom.scss */
+.ws-settings h1, .ws-settings h2, .ws-settings h3, .ws-settings h4, .ws-settings h5, .ws-settings h6 {
+  color: whitesmoke;
+  text-shadow: 0px 0px 1px #aaaaaa;
+}
+/* line 37, ../sass/partials/_custom.scss */
+.ws-settings .stack {
+  margin-bottom: .25em;
+}
+/* line 40, ../sass/partials/_custom.scss */
+.ws-settings .ws-item {
+  margin-bottom: 0px;
+}
+/* line 44, ../sass/partials/_custom.scss */
+.ws-settings .row .row {
+  margin-bottom: 0.5em;
+}
+
+/* line 48, ../sass/partials/_custom.scss */
+.ws-code {
+  padding: 10px;
+}
+/* line 51, ../sass/partials/_custom.scss */
+.ws-code > h1 {
+  font-size: .875em;
+  color: #9f9f9f;
+  margin: 1em 0 1em 0;
+}
+
+/*** =COLOPHON ***/
+/* line 58, ../sass/partials/_custom.scss */
+.colophon {
+  clear: both;
+  text-align: center;
+  font-size: .875em;
+  padding: 1.714em 0;
+  border-top: thin solid #eeeeee;
+  margin-top: 1.714em;
+}
+
+/* line 67, ../sass/partials/_custom.scss */
+.export, .styleguide {
+  margin-top: 0.65em;
+}
+
+/* line 71, ../sass/partials/_custom.scss */
+.slider-wrap {
+  margin: 0;
+  padding: 0;
+  border-top: solid 3px #5e4c3a;
+  min-height: 2.75em;
+}
+
+/* line 76, ../sass/partials/_custom.scss */
+.slider {
+  color: #f2ede9;
+  width: 10em;
+  text-align: center;
+  padding: .5em 1em .65em;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  background: #ff0084;
+  border-top: none;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+/* line 87, ../sass/partials/_custom.scss */
+.slider:hover {
+  color: white;
+  text-shadow: 0px 0px 1px #aaaaaa;
+  border-top: none;
+}
+
+/* line 93, ../sass/partials/_custom.scss */
+.slider:after, .slider:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 102, ../sass/partials/_custom.scss */
+.slider:after {
+  border-top-color: #ff0084;
+  border-width: 5px;
+  left: 50%;
+  margin-left: -5px;
+}
+
+/* line 108, ../sass/partials/_custom.scss */
+.slider:before {
+  border-top-color: whitesmoke;
+  border-width: 10px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+/*
+.up-arrow {
+  margin: 0 auto;
+  display: none;
+  border-width: 5px;
+  border: solid 5px transparent;
+  border-bottom-color: $pinkFlickr;
+  content: " ";
+  height: 0;
+  width: 0;
+}
 */
+/*
+.opened:after, opened:before {
+  border: solid transparent;
+  position: absolute;
+}
+*/
+/*** =MASTHEAD ***/
+/* line 5, ../sass/partials/_masthead.scss */
+.masthead {
+  background: #f6f6f6;
+  overflow: hidden;
+  margin-bottom: .5em;
+}
+
+/* line 7, ../sass/partials/_masthead.scss */
+.logo h1 {
+  margin: 0;
+  float: left;
+  padding: .5em 0;
+  line-height: 1;
+}
+
+/* line 14, ../sass/partials/_masthead.scss */
+.menu {
+  float: right;
+}
+
+/* line 15, ../sass/partials/_masthead.scss */
+.menu ul {
+  padding: 1em 0;
+  margin: 0;
+}
+
+/* line 17, ../sass/partials/_masthead.scss */
+.menu li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 0 .5em .5em;
+}
+
+/* line 23, ../sass/partials/_masthead.scss */
+.menu a {
+  padding: .5em;
+  border: 0.25em solid #73c2fb;
+  display: block;
+}
+
+/* line 29, ../sass/partials/_masthead.scss */
+.menu a:hover {
+  background: #73c2fb;
+  color: whitesmoke;
+}
+
+/*** =FORM ***/
+/* line 4, ../sass/partials/_forms.scss */
+.ws-form {
+  margin-top: -1.5em;
+}
+
+/* line 5, ../sass/partials/_forms.scss */
+input, textarea {
+  display: block;
+  padding: .5em;
+  margin-bottom: .75em;
+  border: 0.25em solid #eeeeee;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  resize: none;
+}
+
+/*
+input:focus, textarea:focus {
+  outline: none;
+  border-color: $blueSky;
+}
+
+input[type='button'], input[type='submit'], button, .button {
+  border: none;
+  background: transparent;
+  line-height: 1;
+  cursor: pointer;
+  padding: 1em 1.5em;
+  border: .25em solid hsla(0,0%,0%,.1);
+  color: $whiteSmoke;
+  @include transition-property(all);
+  @include transition-duration(.3s);
+  @include transition-timing-function(ease-in);
+  display: block;
+  margin-bottom: .75rem;
+  &.rounded {
+    border: none;
+    padding: 1.1em 1.5em;
+    @include border-radius(4px);
+  }
+}
+
+input[type='button']:hover, input[type='submit']:hover, button:hover, .button:hover {
+  box-shadow: inset 0 0 10em hsla(0, 0%, 0%, .1);
+  border-color: hsla(0,0%,100%,.1);
+}
+
+input[type='button']:focus, input[type='submit']:focus, button:focus, .button:focus,
+input[type='button']:active, input[type='submit']:active, button:active, .button:active {
+  box-shadow: inset 0 0 10em hsla(0, 0%, 0%, .2);
+}
+*/
+/* line 56, ../sass/partials/_forms.scss */
+.button.primary {
+  font-size: 1.125em;
+  background-color: #73c2fb;
+}
+
+/* line 60, ../sass/partials/_forms.scss */
+.button.secondary {
+  background-color: #ff944d;
+}
+
+/* line 63, ../sass/partials/_forms.scss */
+.button.tertiary {
+  font-size: .875em;
+  background-color: #9f9f9f;
+}
+
+/* line 4, ../sass/partials/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #222222;
+  font-weight: 400;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+/* line 15, ../sass/partials/_typography.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  _font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* line 23, ../sass/partials/_typography.scss */
+.adj-1 {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+/* line 24, ../sass/partials/_typography.scss */
+.adj-2 {
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+/* line 25, ../sass/partials/_typography.scss */
+.adj-3 {
+  font-family: "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive;
+}
+
+/* line 26, ../sass/partials/_typography.scss */
+.adj-4 {
+  font-family: "Franklin Gothic Medium", Arial, sans-serif;
+}
+
+/* line 27, ../sass/partials/_typography.scss */
+.adj-5 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+/* line 28, ../sass/partials/_typography.scss */
+.adj-6 {
+  font-family: Baskerville, "Baskerville old face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+/* line 31, ../sass/partials/_typography.scss */
+*[class*='select2'] {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ------- Example overrides ------ */
+/* ------- Place your overrides here ------ */
 /* line 241, ../sass/zurb/scss/foundation/components/_global.scss */
 *,
 *:before,
@@ -6291,507 +6789,4 @@ a.th {
 /* line 148, ../sass/zurb/scss/foundation/components/_dropdown.scss */
 .f-dropdown.large {
   max-width: 800px;
-}
-
-/* line 1, ../sass/partials/_foundation-overrides.scss */
-.panel {
-  border-color: pink;
-  background: lightpink;
-}
-
-/* line 5, ../sass/partials/_foundation-overrides.scss */
-.display {
-  background: #eee;
-  margin-bottom: 10px;
-}
-/* line 8, ../sass/partials/_foundation-overrides.scss */
-.display .columns {
-  background: #e7e7e7;
-  border: 1px solid #ddd;
-  text-align: center;
-  padding: .5em;
-}
-
-/**
- * Downloaded from: https://github.com/lloydk/font-stack/blob/master/lib/stylesheets/_font-stack.scss
- */
-/*
- *
- * Color Me SASS v1.0
- * Built and Designed by Richard Bray
- *
- */
-/*** =COLOR ***/
-/* line 5, ../sass/partials/_colors.scss */
-[class^="swatch"] {
-  height: 3.5em;
-  border: 5px solid whitesmoke;
-  -webkit-box-shadow: #dbd7d2 0px 0px 4px;
-  -moz-box-shadow: #dbd7d2 0px 0px 4px;
-  box-shadow: #dbd7d2 0px 0px 4px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-
-/* line 11, ../sass/partials/_colors.scss */
-.primary-color {
-  background: #73c2fb;
-}
-
-/* line 12, ../sass/partials/_colors.scss */
-.secondary-color {
-  background: #ff944d;
-}
-
-/* line 13, ../sass/partials/_colors.scss */
-.alert-color {
-  background: crimson;
-}
-
-/* line 14, ../sass/partials/_colors.scss */
-.success-color {
-  background: #82b548;
-}
-
-/* line 15, ../sass/partials/_colors.scss */
-.color-5 {
-  background: silver;
-}
-
-/* line 16, ../sass/partials/_colors.scss */
-.color-6 {
-  background: #7b3f00;
-}
-
-/* line 18, ../sass/partials/_colors.scss */
-.adj-1 {
-  color: #73c2fb;
-}
-
-/* line 19, ../sass/partials/_colors.scss */
-.adj-2 {
-  color: #ff944d;
-}
-
-/* line 20, ../sass/partials/_colors.scss */
-.adj-3 {
-  color: crimson;
-}
-
-/* line 21, ../sass/partials/_colors.scss */
-.adj-4 {
-  color: #82b548;
-}
-
-/* line 22, ../sass/partials/_colors.scss */
-.adj-5 {
-  color: silver;
-}
-
-/* line 23, ../sass/partials/_colors.scss */
-.adj-6 {
-  color: #7b3f00;
-}
-
-/* line 37, ../sass/partials/_colors.scss */
-fieldset {
-  border-color: silver;
-}
-
-/* line 38, ../sass/partials/_colors.scss */
-mark {
-  background: #ff944d;
-  color: black;
-}
-
-/* line 2, ../sass/partials/_core.scss */
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 5, ../sass/partials/_core.scss */
-body, input, textarea, button, form, select {
-  font: 100%/1.5 Tahoma, Geneva, Verdana, sans-serif;
-  color: #414141;
-}
-
-/* line 10, ../sass/partials/_core.scss */
-textarea {
-  height: inherit;
-}
-
-/* line 14, ../sass/partials/_core.scss */
-a, a:link, a:visited {
-  text-decoration: none;
-  color: #73c2fb;
-  border-bottom: thin solid transparent;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-in;
-  -moz-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
-}
-
-/* line 22, ../sass/partials/_core.scss */
-a.button {
-  color: white;
-}
-
-/* line 25, ../sass/partials/_core.scss */
-a:hover, a:active, a:focus {
-  border-bottom-color: #d2d2d2;
-}
-
-/* line 2, ../sass/partials/_custom.scss */
-.wrap {
-  width: 80em;
-  max-width: 95%;
-  margin: 0 auto;
-}
-
-/* line 7, ../sass/partials/_custom.scss */
-.ws-item {
-  margin-bottom: 2em;
-}
-/* line 9, ../sass/partials/_custom.scss */
-.ws-item > h1 {
-  font-size: 1.5em;
-  color: #9f9f9f;
-  margin: 1em 0 1em 0;
-}
-/* line 14, ../sass/partials/_custom.scss */
-.ws-item h1:first-of-type {
-  margin: 0em 0 .5em 0;
-}
-
-/*** =ADJECTIVES ***/
-/* line 19, ../sass/partials/_custom.scss */
-.ws-adjectives div {
-  font-size: 1.5em;
-  padding-bottom: .25em;
-}
-
-/* line 25, ../sass/partials/_custom.scss */
-.ws-item.ws-adjectives {
-  margin-bottom: .5em;
-}
-
-/* line 28, ../sass/partials/_custom.scss */
-.ws-settings {
-  display: none;
-  color: #222222;
-  background: #9f9f9f;
-  padding: 10px;
-}
-/* line 31, ../sass/partials/_custom.scss */
-.ws-settings h1, .ws-settings h2, .ws-settings h3, .ws-settings h4, .ws-settings h5, .ws-settings h6 {
-  color: whitesmoke;
-  text-shadow: 0px 0px 1px #aaaaaa;
-}
-/* line 37, ../sass/partials/_custom.scss */
-.ws-settings .stack {
-  margin-bottom: .25em;
-}
-/* line 40, ../sass/partials/_custom.scss */
-.ws-settings .ws-item {
-  margin-bottom: 0px;
-}
-
-/* line 45, ../sass/partials/_custom.scss */
-.ws-code {
-  padding: 10px;
-}
-/* line 48, ../sass/partials/_custom.scss */
-.ws-code > h1 {
-  font-size: .875em;
-  color: #9f9f9f;
-  margin: 1em 0 1em 0;
-}
-
-/*** =COLOPHON ***/
-/* line 55, ../sass/partials/_custom.scss */
-.colophon {
-  clear: both;
-  text-align: center;
-  font-size: .875em;
-  padding: 1.714em 0;
-  border-top: thin solid #eeeeee;
-  margin-top: 1.714em;
-}
-
-/* line 64, ../sass/partials/_custom.scss */
-.export {
-  margin-top: 1em;
-}
-
-/* line 67, ../sass/partials/_custom.scss */
-.slider-wrap {
-  margin: 0;
-  padding: 0;
-  border-top: solid 3px #5e4c3a;
-}
-
-/* line 71, ../sass/partials/_custom.scss */
-.slider {
-  color: #f2ede9;
-  width: 10em;
-  text-align: center;
-  padding: .3em 1em;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  background: #ff0084;
-  border-top: none;
-  -moz-border-radius-bottomleft: 8px;
-  -webkit-border-bottom-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  -moz-border-radius-bottomright: 8px;
-  -webkit-border-bottom-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-/* line 82, ../sass/partials/_custom.scss */
-.slider:hover {
-  color: white;
-  text-shadow: 0px 0px 1px #aaaaaa;
-  border-top: none;
-}
-
-/* line 88, ../sass/partials/_custom.scss */
-.slider:after, .slider:before {
-  top: 100%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-/* line 97, ../sass/partials/_custom.scss */
-.slider:after {
-  border-top-color: #ff0084;
-  border-width: 5px;
-  left: 50%;
-  margin-left: -5px;
-}
-
-/* line 103, ../sass/partials/_custom.scss */
-.slider:before {
-  border-top-color: whitesmoke;
-  border-width: 10px;
-  left: 50%;
-  margin-left: -10px;
-}
-
-/*
-.up-arrow {
-  margin: 0 auto;
-  display: none;
-  border-width: 5px;
-  border: solid 5px transparent;
-  border-bottom-color: $pinkFlickr;
-  content: " ";
-  height: 0;
-  width: 0;
-}
-*/
-/*
-.opened:after, opened:before {
-  border: solid transparent;
-  position: absolute;
-}
-*/
-/*** =MASTHEAD ***/
-/* line 5, ../sass/partials/_masthead.scss */
-.masthead {
-  background: #f6f6f6;
-  overflow: hidden;
-  margin-bottom: .5em;
-}
-
-/* line 7, ../sass/partials/_masthead.scss */
-.logo h1 {
-  margin: 0;
-  float: left;
-  padding: .5em 0;
-  line-height: 1;
-}
-
-/* line 14, ../sass/partials/_masthead.scss */
-.menu {
-  float: right;
-}
-
-/* line 15, ../sass/partials/_masthead.scss */
-.menu ul {
-  padding: 1em 0;
-  margin: 0;
-}
-
-/* line 17, ../sass/partials/_masthead.scss */
-.menu li {
-  list-style: none;
-  display: inline-block;
-  margin: 0 0 .5em .5em;
-}
-
-/* line 23, ../sass/partials/_masthead.scss */
-.menu a {
-  padding: .5em;
-  border: 0.25em solid #73c2fb;
-  display: block;
-}
-
-/* line 29, ../sass/partials/_masthead.scss */
-.menu a:hover {
-  background: #73c2fb;
-  color: whitesmoke;
-}
-
-/*** =FORM ***/
-/* line 4, ../sass/partials/_forms.scss */
-.ws-form {
-  margin-top: -1.5em;
-}
-
-/* line 5, ../sass/partials/_forms.scss */
-input, textarea {
-  display: block;
-  padding: .5em;
-  margin-bottom: .75em;
-  border: 0.25em solid #eeeeee;
-  width: 100%;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-in;
-  -moz-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
-  resize: none;
-}
-
-/*
-input:focus, textarea:focus {
-  outline: none;
-  border-color: $blueSky;
-}
-
-input[type='button'], input[type='submit'], button, .button {
-  border: none;
-  background: transparent;
-  line-height: 1;
-  cursor: pointer;
-  padding: 1em 1.5em;
-  border: .25em solid hsla(0,0%,0%,.1);
-  color: $whiteSmoke;
-  @include transition-property(all);
-  @include transition-duration(.3s);
-  @include transition-timing-function(ease-in);
-  display: block;
-  margin-bottom: .75rem;
-  &.rounded {
-    border: none;
-    padding: 1.1em 1.5em;
-    @include border-radius(4px);
-  }
-}
-
-input[type='button']:hover, input[type='submit']:hover, button:hover, .button:hover {
-  box-shadow: inset 0 0 10em hsla(0, 0%, 0%, .1);
-  border-color: hsla(0,0%,100%,.1);
-}
-
-input[type='button']:focus, input[type='submit']:focus, button:focus, .button:focus,
-input[type='button']:active, input[type='submit']:active, button:active, .button:active {
-  box-shadow: inset 0 0 10em hsla(0, 0%, 0%, .2);
-}
-*/
-/* line 56, ../sass/partials/_forms.scss */
-.button.primary {
-  font-size: 1.125em;
-  background-color: #73c2fb;
-}
-
-/* line 60, ../sass/partials/_forms.scss */
-.button.secondary {
-  background-color: #ff944d;
-}
-
-/* line 63, ../sass/partials/_forms.scss */
-.button.tertiary {
-  font-size: .875em;
-  background-color: #9f9f9f;
-}
-
-/* line 4, ../sass/partials/_typography.scss */
-h1, h2, h3, h4, h5, h6 {
-  color: #222222;
-  font-weight: 400;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-}
-
-/* line 15, ../sass/partials/_typography.scss */
-code,
-kbd,
-pre,
-samp {
-  font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  _font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  font-size: 1em;
-  line-height: 1.5em;
-}
-
-/* line 23, ../sass/partials/_typography.scss */
-.adj-1 {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-}
-
-/* line 24, ../sass/partials/_typography.scss */
-.adj-2 {
-  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
-}
-
-/* line 25, ../sass/partials/_typography.scss */
-.adj-3 {
-  font-family: "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive;
-}
-
-/* line 26, ../sass/partials/_typography.scss */
-.adj-4 {
-  font-family: "Franklin Gothic Medium", Arial, sans-serif;
-}
-
-/* line 27, ../sass/partials/_typography.scss */
-.adj-5 {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-}
-
-/* line 28, ../sass/partials/_typography.scss */
-.adj-6 {
-  font-family: Baskerville, "Baskerville old face", "Hoefler Text", Garamond, "Times New Roman", serif;
-}
-
-/* line 31, ../sass/partials/_typography.scss */
-*[class*='select2'] {
-  font-family: Tahoma, Geneva, Verdana, sans-serif;
 }

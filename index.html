@@ -98,8 +98,12 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="export small-12 large-12 columns">
-					<button class="button primary large-12 small-9 column">Export</button>
+				<div class="export small-12 columns">
+					<a class="small-12 button dropdown" href="#" data-dropdown="drop1">Show Me</a>
+					<ul id="drop1" class="f-dropdown" data-dropdown-content>
+					  <li><a class='export-settings' href="#">Export Settings</a></li>
+					  <li><a href="styleguide.html" target="_blank">View Components</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -268,5 +272,30 @@
 <script src="./components/select2/select2.js"></script>
 <script src="./scripts/js/colors.js"></script>
 <script src="./scripts/js/app.js"></script>
+
+<script>
+document.write('<script src=' +
+('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
+'.js><\/script>')
+</script>
+    <script src="sass/zurb/js/foundation/foundation.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.alerts.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.clearing.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.cookie.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.dropdown.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.forms.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.interchange.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.joyride.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.magellan.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.orbit.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.placeholder.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.reveal.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.section.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.tooltips.js"></script>
+    <script src="sass/zurb/js/foundation/foundation.topbar.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+
 </body>
 </html>

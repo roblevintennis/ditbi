@@ -1,29 +1,36 @@
-// Body
-/*
-$body-bg: yellow;
-$body-font-color: #222;
-$body-font-family: Georgia, serif;
-//$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// Colors
-$primary-color: lightblue;
-$secondary-color: lightgreen;
-$alert-color: red;
-$success-color: darkgreen;
-// Heading font styles
-$header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$header-font-weight: bold;
-$header-font-style: normal;
-$header-font-color: #222;
-*/
+// Custom Foundation overrides and partials
+@import "partials/foundation-overrides";
+@import 'partials/colors';
+@import 'partials/core';
+@import 'partials/custom';
+@import 'partials/masthead';
+@import 'partials/forms';
+@import 'partials/typography';
 
+/* ------- Example overrides ------ */
+// Colors
+// $primary-color: #73c2fb;
+// $secondary-color: #FF944D;
+// $alert-color: #dc143c;
+// $success-color: #82b548;
+// $body-bg: #f5f5f5;
+
+// Fonts
+// $body-font-family: Tahoma, Geneva, Verdana, sans-serif;
+// $body-font-color: #222;
+// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $header-font-weight: bold;
+// $header-font-style: normal;
+// $header-font-color: #222;
 // $paragraph-font-family: inherit;
 // $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
-/*
-$primary-color: #73c2fb;
-$secondary-color: #FF944D;
-$alert-color: #dc143c;
-$success-color: #82b548;
-$body-bg: #f5f5f5;
-$body-font-family: Tahoma, Geneva, Verdana, sans-serif;
-$header-font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-*/
+
+// Body Background
+// $body-bg: yellow;
+
+/* ------- Place your overrides here ------ */
+// $primary-color: YOUR_PRIMARY_COLOR
+// $secondary-color: YOUR_SECONDARY_COLOR;
+// $alert-color: YOUR_ALERT_COLOR;
+// $success-color: YOUR_SUCCESS_COLOR;
+// $body-bg: YOUR_BACKGROUND_COLOR;

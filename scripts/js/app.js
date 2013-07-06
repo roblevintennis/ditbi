@@ -423,7 +423,7 @@ $(document).ready(function () {
         setFontHint(e.val, this);
     });
 // ============== WEBSTILES EXPORT ============= //
-    $(".export > .button").on("click", function(evt) {
+    $(".export-settings").on("click", function(evt) {
         exportSettings(
             '<h3>CSS</h3>'+
             '<pre>'+
