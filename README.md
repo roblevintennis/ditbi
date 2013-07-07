@@ -4,7 +4,10 @@
 
 ditbi pulls in a few choice `git submodule` libs: [color-me-sass][color-me-sass] for some excellent colors to create your palette from, and [Zurb Foundation][foundation], used only for the generated styleguide. ditbi tries to use similar CSS class or id's as Foundation.
 
+Short video demo: http://www.youtube.com/watch?v=ERgFCJFpq5E
+
 # Fast Start
+
 
 This repo uses submodules so if you're going to pull in everything required you have to do:
 
