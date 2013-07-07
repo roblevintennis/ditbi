@@ -176,63 +176,63 @@ a:hover, a:active, a:focus {
 }
 
 /* line 7, ../sass/partials/_custom.scss */
-.ws-item {
+.item {
   margin-bottom: 2em;
 }
 /* line 9, ../sass/partials/_custom.scss */
-.ws-item > h1 {
+.item > h1 {
   font-size: 1.5em;
   color: #9f9f9f;
   margin: 1em 0 1em 0;
 }
 /* line 14, ../sass/partials/_custom.scss */
-.ws-item h1:first-of-type {
+.item h1:first-of-type {
   margin: 0em 0 .5em 0;
 }
 
 /*** =ADJECTIVES ***/
 /* line 19, ../sass/partials/_custom.scss */
-.ws-adjectives div {
+.adjectives div {
   font-size: 1.5em;
   padding-bottom: .25em;
 }
 
 /* line 25, ../sass/partials/_custom.scss */
-.ws-item.ws-adjectives {
+.item.adjectives {
   margin-bottom: .5em;
 }
 
 /* line 28, ../sass/partials/_custom.scss */
-.ws-settings {
+.settings {
   display: none;
   color: #222222;
   background: #9f9f9f;
   padding: 10px;
 }
 /* line 31, ../sass/partials/_custom.scss */
-.ws-settings h1, .ws-settings h2, .ws-settings h3, .ws-settings h4, .ws-settings h5, .ws-settings h6 {
+.settings h1, .settings h2, .settings h3, .settings h4, .settings h5, .settings h6 {
   color: whitesmoke;
   text-shadow: 0px 0px 1px #aaaaaa;
 }
 /* line 37, ../sass/partials/_custom.scss */
-.ws-settings .stack {
+.settings .stack {
   margin-bottom: .25em;
 }
 /* line 40, ../sass/partials/_custom.scss */
-.ws-settings .ws-item {
+.settings .item {
   margin-bottom: 0px;
 }
 /* line 44, ../sass/partials/_custom.scss */
-.ws-settings .row .row {
+.settings .row .row {
   margin-bottom: 0.5em;
 }
 
 /* line 48, ../sass/partials/_custom.scss */
-.ws-code {
+.code {
   padding: 10px;
 }
 /* line 51, ../sass/partials/_custom.scss */
-.ws-code > h1 {
+.code > h1 {
   font-size: .875em;
   color: #9f9f9f;
   margin: 1em 0 1em 0;
@@ -287,51 +287,6 @@ a:hover, a:active, a:focus {
   border-top: none;
 }
 
-/* line 93, ../sass/partials/_custom.scss */
-.slider:after, .slider:before {
-  top: 100%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-/* line 102, ../sass/partials/_custom.scss */
-.slider:after {
-  border-top-color: #ff0084;
-  border-width: 5px;
-  left: 50%;
-  margin-left: -5px;
-}
-
-/* line 108, ../sass/partials/_custom.scss */
-.slider:before {
-  border-top-color: whitesmoke;
-  border-width: 10px;
-  left: 50%;
-  margin-left: -10px;
-}
-
-/*
-.up-arrow {
-  margin: 0 auto;
-  display: none;
-  border-width: 5px;
-  border: solid 5px transparent;
-  border-bottom-color: $pinkFlickr;
-  content: " ";
-  height: 0;
-  width: 0;
-}
-*/
-/*
-.opened:after, opened:before {
-  border: solid transparent;
-  position: absolute;
-}
-*/
 /*** =MASTHEAD ***/
 /* line 5, ../sass/partials/_masthead.scss */
 .masthead {

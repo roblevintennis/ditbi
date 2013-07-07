@@ -10,7 +10,7 @@
     <link href="components/select2/select2.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="ws-settings">
+<div class="settings">
 	<div class="row">
 		<!-- Zurb Foundation docs: If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid -->
 		<div class="small-6 columns">
@@ -99,7 +99,7 @@
 			</div>
 			<div class="row">
 				<div class="export small-12 columns">
-					<a class="small-12 button dropdown" href="#" data-dropdown="drop1">Show Me</a>
+					<a class="primary small-12 button dropdown" href="#" data-dropdown="drop1">Show Me</a>
 					<ul id="drop1" class="f-dropdown" data-dropdown-content>
 					  <li><a class='export-settings' href="#">Export Settings</a></li>
 					  <li><a href="styleguide.html" target="_blank">View Components</a></li>
@@ -138,7 +138,7 @@
 <div class="content" role="main">
 	<div class="row">
 		<div class="small-6 columns">
-			<section class="ws-item ws-colors">
+			<section class="item ws-colors">
 				<h1>Colors</h1>
 				<div class="row">
 					<div class="small-6 large-2 columns">
@@ -161,7 +161,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="ws-item ws-form">
+			<section class="item ws-form">
 				<h1>Form</h1>
 				<form>
 		            <div class="row">
@@ -219,7 +219,7 @@
 		<div class="small-6 columns">
 			<div class="row">
 				<div class="small-12 columns">
-					<section class="ws-item ws-typography">
+					<section class="item ws-typography">
 						<h1>Typography</h1>
 						<aside>
 							<h1>Level One Heading</h1>
@@ -233,7 +233,7 @@
 			</div>
 			<div class="row">
 				<div class="small-12 columns">
-					<section class="ws-item ws-adjectives">
+					<section class="item adjectives">
 						<h1>Adjectives</h1>
 						<div class="row">
 							<div class="adj-1 small-12 large-4 columns">
@@ -267,15 +267,15 @@
 	Project Name
 </footer>
 </div>
-<script src="./components/jquery/jquery.js"></script>
-<script src="./components/underscore/underscore.js"></script>
-<script src="./components/select2/select2.js"></script>
-<script src="./scripts/js/colors.js"></script>
-<script src="./scripts/js/app.js"></script>
+<script src="components/jquery/jquery.js"></script>
+<script src="components/underscore/underscore.js"></script>
+<script src="components/select2/select2.js"></script>
+<script src="scripts/js/colors.js"></script>
+<script src="scripts/js/app.js"></script>
 
 <script>
 document.write('<script src=' +
-('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
+('__proto__' in {} ? 'components/zepto/zepto' : 'components/jquery/jquery') +
 '.js><\/script>')
 </script>
     <script src="sass/zurb/js/foundation/foundation.js"></script>

@@ -4,7 +4,7 @@
   max-width: 95%;
   margin: 0 auto;
 }
-.ws-item {
+.item {
   margin-bottom: 2em;
   & > h1 {
     font-size: 1.5em;
@@ -16,16 +16,16 @@
   }
 }
 /*** =ADJECTIVES ***/
-.ws-adjectives div {
+.adjectives div {
   font-size: 1.5em;
   padding-bottom: .25em;
 }
 
 // Override
-.ws-item.ws-adjectives {
+.item.adjectives {
   margin-bottom: .5em;
 }
-.ws-settings {
+.settings {
   display: none;
   color: $black;
   h1,h2,h3,h4,h5,h6 {
@@ -37,7 +37,7 @@
   .stack {
     margin-bottom: .25em;
   }
-  .ws-item {
+  .item {
     // Makes settings padding less so we can see more of the page being styled
     margin-bottom: 0px;
   }
@@ -45,7 +45,7 @@
     margin-bottom: 0.5em;
   }
 }
-.ws-code {
+.code {
   //border: .25em solid $soft-white;
   padding: 10px;
   & > h1 {
@@ -90,45 +90,3 @@
     border-top: none;
   }
 }
-.slider:after, .slider:before {
-  top: 100%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.slider:after {
-  border-top-color: $pinkFlickr;
-  border-width: 5px;
-  left: 50%;
-  margin-left: -5px;
-}
-.slider:before {
-  border-top-color: $whiteSmoke;
-  border-width: 10px;
-  left: 50%;
-  margin-left: -10px;
-}
-
-// Hack to add an up arrow when slider is opened ... dealing with pseudo classes in jquery no fun unless you completely replace the whole css
-/*
-.up-arrow {
-  margin: 0 auto;
-  display: none;
-  border-width: 5px;
-  border: solid 5px transparent;
-  border-bottom-color: $pinkFlickr;
-  content: " ";
-  height: 0;
-  width: 0;
-}
-*/
-// -------- Slider opened styles
-/*
-.opened:after, opened:before {
-  border: solid transparent;
-  position: absolute;
-}
-*/

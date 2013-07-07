@@ -2,17 +2,7 @@ $(document).ready(function () {
 
     // Toggles open/closed the settings drawer
     $(".slider").click(function(){
-        $(".ws-settings").slideToggle("slow");
-    //     var isOpen = $(this).hasClass('opened');
-    //     if (isOpen) {
-    //         $(this).removeClass('opened');
-    //         $('.up-arrow').hide();
-    //     } else {
-    //         $(this).addClass('opened');
-    //         setTimeout(function() {
-    //             $('.up-arrow').show();
-    //         }, 75);
-    //     }
+        $(".settings").slideToggle("slow");
     });
     // Categorized colors e.g. _ambers, _blues, etc., from colors.js
     var colors = _colorz;
@@ -23,7 +13,7 @@ $(document).ready(function () {
             flattened[colorname] = value;
         });
     });
-// ============== COLORS ============= //
+    // ============== COLORS ============= //
     // `key` is something like "_ambers" "_whites" etc. see sass/colors/colors directory
     function getColorsByGroup(key) {
         var arr = _.map(colors[key], function(v, k) {
@@ -52,10 +42,6 @@ $(document).ready(function () {
     /**
      * This will go through the color group's corresponding DOM selectors and reset the
      * `color`, `background-color`, `border`, etc., as appropriate with new color.
-     * -- NOTE -- The way we do this here requires that the JavaScript selectors match
-     * up with whatever's set in the Sass/CSS. If we add new rules that use colors in the
-     * CSS, we'll need to keep this consistent with those new rules so dynamic updates are
-     * applied as expected.
      * @param {String} group    The colors group e.g. 'primary-color', 'color-6', etc.
      * @param {String} newColor The new color. Can either by a key in to our color-me-sass
      * colors, or an actual color value e.g. `red` or `#ddd`.
@@ -65,7 +51,6 @@ $(document).ready(function () {
         newColor = getColor(newColor);
         switch (group) {
             case 'primary-color':
-                console.log("In primary-color");
                 $('.menu a').css('border', '.25em solid '+newColor);
                 $('input:focus, textarea:focus').css({'border-color': newColor});
                 $('input, textarea').focusin(function(evt) {
@@ -75,7 +60,7 @@ $(document).ready(function () {
                     $(evt.currentTarget).css('border-color', flattened['$whiteSmoke']);
                 });
                 // Changes all anchors colors (but NOT dynamic color-picker anchors)
-                $('a, a:link, a:visited').not('.ws-settings a').not('.button').css('color', newColor);
+                $('a, a:link, a:visited').not('.settings a').not('.button').css('color', newColor);
                 // Hack since :not(:hover) no longer works properly in latest jquery :(
                 $('.menu a').hover(
                     function(evt) {
@@ -91,7 +76,6 @@ $(document).ready(function () {
                         });
                     }
                 );
-                // $('a.button.primary').css('background-color', newColor);
                 $('.primary').css('background-color', newColor);
                 $('.primary').hover(
                     function(evt) {
@@ -105,7 +89,6 @@ $(document).ready(function () {
                 colorsInUse.primaryColor = colorKey;
                 break;
             case 'secondary-color':
-                console.log("In secondary-color");
                 $('.secondary-color, .secondary').css('background-color', newColor);
                 $('.secondary').hover(
                     function(evt) {
@@ -120,7 +103,6 @@ $(document).ready(function () {
                 colorsInUse.secondaryColor = colorKey;
                 break;
             case 'alert-color':
-                console.log("In alert-color");
                 $('.alert-color, .button.alert').css('background-color', newColor);
                 $('.alert').hover(
                     function(evt) {
@@ -134,7 +116,6 @@ $(document).ready(function () {
                 colorsInUse.alertColor = colorKey;
                 break;
             case 'success-color':
-                console.log("In success-color");
                 $('.success-color, .button.success').css('background-color', newColor);
                 $('.success').hover(
                     function(evt) {
@@ -148,24 +129,21 @@ $(document).ready(function () {
                 colorsInUse.successColor = colorKey;
                 break;
             case 'color-5':
-                console.log("In color-5");
                 $('.color-5').css('background-color', newColor);
                 $('.adj-5').css('color', newColor);
                 colorsInUse.color5 = colorKey;
                 break;
             case 'color-6':
-                console.log("In color-6");
                 $('.color-6').css('background-color', newColor);
                 $('.adj-6').css('color', newColor);
                 colorsInUse.color6 = colorKey;
                 break;
             case 'color-bg':
-                console.log("In color-bg");
                 $('body, .masthead').css('background-color', newColor);
                 colorsInUse.bg = colorKey;
                 break;
             default:
-                console.log("In default case");
+                console.log("In default case .. huh?");
                 break;
         }
     }
@@ -177,7 +155,6 @@ $(document).ready(function () {
         successColor: '$greenGroupon',
         color5: '$graySilver',
         color6: '$brownChocolate',
-        // custom colors mainly for border and typo
         black: '$black',
         white: '$whiteSmoke',
         bg: '$whiteSmoke',
@@ -258,11 +235,9 @@ $(document).ready(function () {
     $("#color-picker-3").val(colorsInUse.alertColor);
     $("#color-picker-3").select2(select2Options);
     $("#color-picker-3").on("change", function(e) {
-        // console.log("change "+JSON.stringify({val:e.val, added:e.added, removed:e.removed}));
         setCSSColor('alert-color', e.val);
     });
     $("#color-picker-3").on("select2-highlight", function(e) {
-        // console.log("highlighted val="+ e.val+" choice="+ JSON.stringify(e.choice));
         setCSSColor('alert-color', e.val);
         setColorHint(e.val, this);
     });
@@ -307,9 +282,8 @@ $(document).ready(function () {
         setColorHint(e.val, this);
     });
 // ============== TYPOGRAPHY ============= //
-    // Serif font-stacks
-    // TODO: These are pulled out from _font-stack.scss. Probably should eventually have a node.js to pick up (although the font-stack lib doesn't seem to get updated anymore so might not be worthwhile ROI)
     var fonts = {
+        //Serif font-stacks
         serifs: {
             '$garamond-font-stack': "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif",
             '$lucida-bright-font-stack': '"Lucida Bright", Georgia, serif',
@@ -324,7 +298,7 @@ $(document).ready(function () {
             '$cambria-font-stack': 'Cambria, Georgia, serif',
             '$book-antiqua-font-stack': '"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif',
         },
-        // Sans-Serif font-stacks
+        //Sans font-stacks
         sans: {
             '$optima-font-stack': 'Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif',
             '$futura-font-stack': 'Futura, "Trebuchet MS", Arial, sans-serif',
@@ -422,7 +396,7 @@ $(document).ready(function () {
         setCSSFont('titles', e.val);
         setFontHint(e.val, this);
     });
-// ============== WEBSTILES EXPORT ============= //
+    // ============== EXPORT ============= //
     $(".export-settings").on("click", function(evt) {
         exportSettings(
             '<h3>CSS</h3>'+
