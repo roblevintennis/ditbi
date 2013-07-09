@@ -8,13 +8,22 @@ Short video demo: http://www.youtube.com/watch?v=ERgFCJFpq5E
 
 # Fast Start
 
+First ensure you have Compass installed:
 
-This repo uses submodules so if you're going to pull in everything required you have to do:
+```bash
+# Windows
+$ gem install compass
+# Linux/OS X
+$ sudo gem install compass
+```
+
+Next, as this repo uses submodules you'll pull in everything required by adding the `--recursive` option when you clone:
 
 ```bash
 # Add the –recursive flag to pull in all submodules, etc.:
 git clone git@github.com:roblevintennis/ditbi.git --recursive
 ```
+
 See https://twoguysarguing.wordpress.com/2010/11/14/tie-git-submodules-to-a-particular-commit-or-branch/ for details on how this works.
 
 ## Zurb Foundation and the _settings-overrides.scss file
@@ -59,7 +68,7 @@ See the https://github.com/roblevintennis/ditbi/wiki/Developer-Quick-Start wiki 
 
 ## Project History
 
-[ditbi][ditbi] originally started as a fork of [Webstiles][webstiles], the brain-child of [Namanyay Goel][namanyayg], creator and maintainer of the Webstiles project. Since the primary goals of the two tools are quite different, a new project was created for ditbi. How are they different? While Webstiles is essentially a static template (heavily inspired from Style Tiles) that helps you prototype in the browser and create a static design deliverable to show your client, _ditbi_ aims more to be a creative workflow tool that helps you to interactively experiment with colors and typography for your web site. The end goal of dipti is to simply export your selected colors and typpography settings such that you can easily paste them over in to your web site or style guide. It's essentially a first step in your _design in the browser_ workflow.
+[ditbi][ditbi] originally started as a fork of [Webstiles][webstiles], the brain-child of [Namanyay Goel][namanyayg], creator and maintainer of the Webstiles project. Since the primary goals of the two tools are quite different, a new project was created for ditbi. How are they different? While Webstiles is essentially a static template (heavily inspired from Style Tiles) that helps you prototype in the browser and create a static design deliverable to show your client, _ditbi_ aims more to be a creative workflow tool that helps you to interactively experiment with colors and typography for your web site. The end goal of ditbi is to simply export your selected colors and typpography settings such that you can easily paste them over in to your web site or style guide. It's essentially a first step in your _design in the browser_ workflow.
 
 [namanyayg]: http://namanyayg.com/
 [webstiles]: https://github.com/namanyayg/webstiles
