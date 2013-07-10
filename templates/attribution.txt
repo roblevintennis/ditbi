@@ -1,0 +1,2 @@
+Although at time of writing this each of these templates rendered with: © Copyright no one at all. Go to town.
+Just want to mention that these templates were created by Zurb folks and obtained from http://foundation.zurb.com/templates.php ... thanks Zurb devs/designers for creating some very useful layout templates!!!
