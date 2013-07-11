@@ -1,4 +1,10 @@
 // Custom
+.main {
+  @include border-radius(4px);
+  @include single-box-shadow($gray-light, 5px, 2px, 8px);
+  padding: 15px;
+}
+
 .wrap {
   width: 80em;
   max-width: 95%;

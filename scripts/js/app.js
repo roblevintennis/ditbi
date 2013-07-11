@@ -13,6 +13,7 @@ $(document).ready(function () {
             flattened[colorname] = value;
         });
     });
+
     // ============== COLORS ============= //
     // `key` is something like "_ambers" "_whites" etc. see sass/colors/colors directory
     function getColorsByGroup(key) {
@@ -139,7 +140,7 @@ $(document).ready(function () {
                 colorsInUse.color6 = colorKey;
                 break;
             case 'color-bg':
-                $('body, .masthead').css('background-color', newColor);
+                $('.main').css('background-color', newColor);
                 colorsInUse.bg = colorKey;
                 break;
             default:
@@ -281,6 +282,40 @@ $(document).ready(function () {
         setCSSColor('color-bg', e.val);
         setColorHint(e.val, this);
     });
+
+// ============== Textures ============= //
+    function setTexture(name) {
+        var path = 'textures/';
+        var extension = 'png';
+        var url = 'url('+path+name+'.'+extension+')';
+        $('body').css('background-image',url);
+    }
+    // Default texture
+    setTexture('wavegrid');
+
+/**
+ * WORK IN PROGRESS
+ *     - Scrape all texture file names using node.js script
+ *     - Pull in those names here
+ *     - populate dropdown with said names
+ */
+    var texturesForSelect2 = [
+        { text: 'Lights', children: [{id:'a', text:'a here'}, {id: 'b', text:'b here'}] },
+        { text: 'Darks', children: [{id:'a', text:'a here'}, {id: 'b', text:'b here'}] }
+    ];
+    var textureSelect2Options= _.clone(select2Options);
+    textureSelect2Options.placeholder = 'Select Texture';
+    textureSelect2Options.data = texturesForSelect2;
+    // Texture dropdown picker
+    $("#texture-picker").val('Select texture');
+    $("#texture-picker").select2(textureSelect2Options);
+    $("#texture-picker").on("change", function(e) {
+        setTexture('back_pattern');
+    });
+    $("#texture-picker").on("select2-highlight", function(e) {
+        setTexture('back_pattern');
+    });
+
 // ============== TYPOGRAPHY ============= //
     var fonts = {
         //Serif font-stacks

@@ -4,3 +4,6 @@
 [submodule "sass/zurb"]
 	path = sass/zurb
 	url = git@github.com:zurb/foundation.git
+[submodule "textures"]
+	path = textures
+	url = git@github.com:subtlepatterns/SubtlePatterns.git

@@ -169,69 +169,82 @@ a:hover, a:active, a:focus {
 }
 
 /* line 2, ../sass/partials/_custom.scss */
+.main {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 5px 2px 8px #d2d2d2;
+  -moz-box-shadow: 5px 2px 8px #d2d2d2;
+  box-shadow: 5px 2px 8px #d2d2d2;
+  padding: 15px;
+}
+
+/* line 8, ../sass/partials/_custom.scss */
 .wrap {
   width: 80em;
   max-width: 95%;
   margin: 0 auto;
 }
 
-/* line 7, ../sass/partials/_custom.scss */
+/* line 13, ../sass/partials/_custom.scss */
 .item {
   margin-bottom: 2em;
 }
-/* line 9, ../sass/partials/_custom.scss */
+/* line 15, ../sass/partials/_custom.scss */
 .item > h1 {
   font-size: 1.5em;
   color: #9f9f9f;
   margin: 1em 0 1em 0;
 }
-/* line 14, ../sass/partials/_custom.scss */
+/* line 20, ../sass/partials/_custom.scss */
 .item h1:first-of-type {
   margin: 0em 0 .5em 0;
 }
 
 /*** =ADJECTIVES ***/
-/* line 19, ../sass/partials/_custom.scss */
+/* line 25, ../sass/partials/_custom.scss */
 .adjectives div {
   font-size: 1.5em;
   padding-bottom: .25em;
 }
 
-/* line 25, ../sass/partials/_custom.scss */
+/* line 31, ../sass/partials/_custom.scss */
 .item.adjectives {
   margin-bottom: .5em;
 }
 
-/* line 28, ../sass/partials/_custom.scss */
+/* line 34, ../sass/partials/_custom.scss */
 .settings {
   display: none;
   color: #222222;
   background: #9f9f9f;
   padding: 10px;
 }
-/* line 31, ../sass/partials/_custom.scss */
+/* line 37, ../sass/partials/_custom.scss */
 .settings h1, .settings h2, .settings h3, .settings h4, .settings h5, .settings h6 {
   color: whitesmoke;
   text-shadow: 0px 0px 1px #aaaaaa;
 }
-/* line 37, ../sass/partials/_custom.scss */
+/* line 43, ../sass/partials/_custom.scss */
 .settings .stack {
   margin-bottom: .25em;
 }
-/* line 40, ../sass/partials/_custom.scss */
+/* line 46, ../sass/partials/_custom.scss */
 .settings .item {
   margin-bottom: 0px;
 }
-/* line 44, ../sass/partials/_custom.scss */
+/* line 50, ../sass/partials/_custom.scss */
 .settings .row .row {
   margin-bottom: 0.5em;
 }
 
-/* line 48, ../sass/partials/_custom.scss */
+/* line 54, ../sass/partials/_custom.scss */
 .code {
   padding: 10px;
 }
-/* line 51, ../sass/partials/_custom.scss */
+/* line 57, ../sass/partials/_custom.scss */
 .code > h1 {
   font-size: .875em;
   color: #9f9f9f;
@@ -239,7 +252,7 @@ a:hover, a:active, a:focus {
 }
 
 /*** =COLOPHON ***/
-/* line 58, ../sass/partials/_custom.scss */
+/* line 64, ../sass/partials/_custom.scss */
 .colophon {
   clear: both;
   text-align: center;
@@ -249,12 +262,12 @@ a:hover, a:active, a:focus {
   margin-top: 1.714em;
 }
 
-/* line 67, ../sass/partials/_custom.scss */
+/* line 73, ../sass/partials/_custom.scss */
 .export, .styleguide {
   margin-top: 0.65em;
 }
 
-/* line 71, ../sass/partials/_custom.scss */
+/* line 77, ../sass/partials/_custom.scss */
 .slider-wrap {
   margin: 0;
   padding: 0;
@@ -262,7 +275,7 @@ a:hover, a:active, a:focus {
   min-height: 2.75em;
 }
 
-/* line 76, ../sass/partials/_custom.scss */
+/* line 82, ../sass/partials/_custom.scss */
 .slider {
   color: #f2ede9;
   width: 10em;
@@ -280,22 +293,20 @@ a:hover, a:active, a:focus {
   -webkit-border-bottom-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-/* line 87, ../sass/partials/_custom.scss */
+/* line 93, ../sass/partials/_custom.scss */
 .slider:hover {
   color: white;
   text-shadow: 0px 0px 1px #aaaaaa;
   border-top: none;
 }
 
-/*** =MASTHEAD ***/
-/* line 5, ../sass/partials/_masthead.scss */
+/* line 2, ../sass/partials/_masthead.scss */
 .masthead {
-  background: #f6f6f6;
   overflow: hidden;
   margin-bottom: .5em;
 }
 
-/* line 7, ../sass/partials/_masthead.scss */
+/* line 8, ../sass/partials/_masthead.scss */
 .logo h1 {
   margin: 0;
   float: left;
@@ -303,32 +314,32 @@ a:hover, a:active, a:focus {
   line-height: 1;
 }
 
-/* line 14, ../sass/partials/_masthead.scss */
+/* line 15, ../sass/partials/_masthead.scss */
 .menu {
   float: right;
 }
 
-/* line 15, ../sass/partials/_masthead.scss */
+/* line 16, ../sass/partials/_masthead.scss */
 .menu ul {
   padding: 1em 0;
   margin: 0;
 }
 
-/* line 17, ../sass/partials/_masthead.scss */
+/* line 18, ../sass/partials/_masthead.scss */
 .menu li {
   list-style: none;
   display: inline-block;
   margin: 0 0 .5em .5em;
 }
 
-/* line 23, ../sass/partials/_masthead.scss */
+/* line 24, ../sass/partials/_masthead.scss */
 .menu a {
   padding: .5em;
   border: 0.25em solid #73c2fb;
   display: block;
 }
 
-/* line 29, ../sass/partials/_masthead.scss */
+/* line 30, ../sass/partials/_masthead.scss */
 .menu a:hover {
   background: #73c2fb;
   color: whitesmoke;
