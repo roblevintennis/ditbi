@@ -284,36 +284,33 @@ $(document).ready(function () {
     });
 
 // ============== Textures ============= //
+    var textureInUse = null;
     function setTexture(name) {
-        var path = 'textures/';
-        var extension = 'png';
-        var url = 'url('+path+name+'.'+extension+')';
-        $('body').css('background-image',url);
+        var url = 'url('+ _texturez[name] +')';
+        $('body').css('background-image', url);
+        textureInUse = url;
     }
-    // Default texture
-    setTexture('wavegrid');
-
-/**
- * WORK IN PROGRESS
- *     - Scrape all texture file names using node.js script
- *     - Pull in those names here
- *     - populate dropdown with said names
- */
-    var texturesForSelect2 = [
-        { text: 'Lights', children: [{id:'a', text:'a here'}, {id: 'b', text:'b here'}] },
-        { text: 'Darks', children: [{id:'a', text:'a here'}, {id: 'b', text:'b here'}] }
-    ];
+    function getTexture(key) {
+        return _texturez[key] || null;
+    }
+    function createTexturesForSelect2() {
+        return _.map(_texturez, function(v, k) {
+            return {id: k, text: k};
+        });
+    }
+    // Create a data structure for select2 of our textures like [{id:foo,text:bar},...]
+    var texturesForSelect2 = createTexturesForSelect2();
     var textureSelect2Options= _.clone(select2Options);
     textureSelect2Options.placeholder = 'Select Texture';
     textureSelect2Options.data = texturesForSelect2;
     // Texture dropdown picker
-    $("#texture-picker").val('Select texture');
+    $("#texture-picker").val('None');
     $("#texture-picker").select2(textureSelect2Options);
     $("#texture-picker").on("change", function(e) {
-        setTexture('back_pattern');
+        setTexture(e.val);
     });
     $("#texture-picker").on("select2-highlight", function(e) {
-        setTexture('back_pattern');
+        setTexture(e.val);
     });
 
 // ============== TYPOGRAPHY ============= //
@@ -433,6 +430,7 @@ $(document).ready(function () {
     });
     // ============== EXPORT ============= //
     $(".export-settings").on("click", function(evt) {
+        var textureUsed = textureInUse ? 'ELEMENT_TO_APPLY_TEXTURE_TO { background-image: '+textureInUse+'; }\n' : '';
         exportSettings(
             '<h3>CSS</h3>'+
             '<pre>'+
@@ -442,6 +440,7 @@ $(document).ready(function () {
                 '.success-color { background: '+flattened[colorsInUse.successColor]+'; }\n'+
                 '.color-5 { background: '+flattened[colorsInUse.color5]+'; }\n'+
                 '.color-6 { background: '+flattened[colorsInUse.color6]+'; }\n'+
+                textureUsed +
                 '.bg { background: '+flattened[colorsInUse.bg]+'; }\n'+
                 '.font-main { font-family: '+flattenedFonts[fontsInUse.main]+'; }\n'+
                 '.font-title { font-family: '+flattenedFonts[fontsInUse.titles]+'; }\n'+
@@ -459,6 +458,7 @@ $(document).ready(function () {
                 '$alert-color: '+colorsInUse.alertColor+';\n'+
                 '$success-color: '+colorsInUse.successColor+';\n'+
                 '$body-bg: '+colorsInUse.bg+';\n'+
+                textureUsed +
                 '/* These fonts require the partial: sass/partials/_font-stack.scss. Altneratively, copy over values from CSS section above */\n'+
                 '$body-font-family: '+fontsInUse.main+';\n'+
                 '$header-font-family: '+fontsInUse.titles+';\n'+
@@ -475,6 +475,7 @@ $(document).ready(function () {
                 '.color-5 { background: '+colorsInUse.color5+'; }\n'+
                 '.color-6 { background: '+colorsInUse.color6+'; }\n'+
                 '.bg { background: '+colorsInUse.bg+'; }\n'+
+                textureUsed +
                 '/* These fonts require the partial: sass/partials/_font-stack.scss. Altneratively, copy over values from CSS section above */\n'+
                 '.font-main { font-family: '+fontsInUse.main+'; }\n'+
                 '.font-title { font-family: '+fontsInUse.titles+'; }\n'+
@@ -489,11 +490,11 @@ $(document).ready(function () {
                 '.color-5 { background: '+colorsInUse.color5.replace('$','@')+'; }\n'+
                 '.color-6 { background: '+colorsInUse.color6.replace('$','@')+'; }\n'+
                 '.bg { background: '+colorsInUse.bg.replace('$','@')+'; }\n'+
+                textureUsed +
                 '/* These fonts require the partial: sass/partials/_font-stack.scss. Altneratively, copy over values from CSS section above */\n'+
                 '.font-main { font-family: '+fontsInUse.main.replace('$','@')+'; }\n'+
                 '.font-title { font-family: '+fontsInUse.titles.replace('$','@')+'; }\n'+
             '</pre>' +
-
             '<h3>Twitter Bootstrap</h3>'+
             '<p>Bootstrap requires some fiddling because they do not use names like <pre>primary-color secondary-color ...</pre> But hope is not lost...you can still use the above LESS settings to customize <a href="https://github.com/twitter/bootstrap">Bootstrap</a> by simply overriding the <a href="https://github.com/twitter/bootstrap/blob/master/less/variables.less">variables.less file</a> by creating your own <pre>variables-overrides.less</pre> file, and include it AFTER the bootstrap _variables.less partial. Then simply edit to taste. Disclaimer: You must know how to compile LESS and also be using color-me-sass!</p>' +
             '<p>Suggestions: In your variables override file, you may redefine colors in the "Accent colors" section like: <pre>@blue @red</pre> In the Typography section replace variables like: <pre>@sansFontFamily @serifFontFamily</pre> Just look around in there as their definitions are self-evident.' +
